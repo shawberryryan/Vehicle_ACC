@@ -1,0 +1,1 @@
+var modelInfo = {model:"Final_project_template"};var modelHierarchy=[{model:"Final_project_template",relativePath:"_internal.html",parent:"null"},];

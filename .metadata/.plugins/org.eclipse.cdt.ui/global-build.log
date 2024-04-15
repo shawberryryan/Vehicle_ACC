@@ -1,0 +1,147 @@
+13:05:12 **** Build of configuration Debug for project project_1 ****
+make -j8 all 
+Building file: ../Project_Settings/Startup_Code/startup.c
+Building file: ../Project_Settings/Startup_Code/startup_S32K144.S
+Building file: ../src/main.c
+Building file: ../Project_Settings/Startup_Code/system_S32K144.c
+Executing target #2 ../Project_Settings/Startup_Code/startup_S32K144.S
+Executing target #1 ../Project_Settings/Startup_Code/startup.c
+Executing target #4 ../src/main.c
+Executing target #3 ../Project_Settings/Startup_Code/system_S32K144.c
+Invoking: Standard S32DS Assembler
+arm-none-eabi-gcc "@Project_Settings/Startup_Code/startup_S32K144.args" -c -o "Project_Settings/Startup_Code/startup_S32K144.o" "../Project_Settings/Startup_Code/startup_S32K144.S"
+Invoking: Standard S32DS C Compiler
+Invoking: Standard S32DS C Compiler
+arm-none-eabi-gcc "@Project_Settings/Startup_Code/startup.args" -MMD -MP -MF"Project_Settings/Startup_Code/startup.d" -MT"Project_Settings/Startup_Code/startup.o" -c -o "Project_Settings/Startup_Code/startup.o" "../Project_Settings/Startup_Code/startup.c"
+Invoking: Standard S32DS C Compiler
+arm-none-eabi-gcc "@src/main.args" -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
+arm-none-eabi-gcc "@Project_Settings/Startup_Code/system_S32K144.args" -MMD -MP -MF"Project_Settings/Startup_Code/system_S32K144.d" -MT"Project_Settings/Startup_Code/system_S32K144.o" -c -o "Project_Settings/Startup_Code/system_S32K144.o" "../Project_Settings/Startup_Code/system_S32K144.c"
+Finished building: ../Project_Settings/Startup_Code/startup_S32K144.S
+ 
+Finished building: ../src/main.c
+ 
+Finished building: ../Project_Settings/Startup_Code/system_S32K144.c
+ 
+Finished building: ../Project_Settings/Startup_Code/startup.c
+ 
+Building target: project_1.elf
+Executing target #5 project_1.elf
+Invoking: Standard S32DS C Linker
+arm-none-eabi-gcc -o "project_1.elf" "@project_1.args"   
+Finished building target: project_1.elf
+ 
+Executing target #6 project_1.siz
+Invoking: Standard S32DS Print Size
+arm-none-eabi-size --format=berkeley  project_1.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1428	      0	   3072	   4500	   1194	project_1.elf
+Finished building: project_1.siz
+ 
+13:14:10 **** Incremental Build of configuration Debug for project project_1 ****
+make -j8 all 
+Executing target #6 project_1.siz
+Invoking: Standard S32DS Print Size
+arm-none-eabi-size --format=berkeley  project_1.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1428	      0	   3072	   4500	   1194	project_1.elf
+Finished building: project_1.siz
+ 
+13:22:43 **** Incremental Build of configuration Debug for project project_1 ****
+make -j8 all 
+Executing target #6 project_1.siz
+Invoking: Standard S32DS Print Size
+arm-none-eabi-size --format=berkeley  project_1.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1428	      0	   3072	   4500	   1194	project_1.elf
+Finished building: project_1.siz
+ 
+13:31:07 **** Incremental Build of configuration Debug for project project_1 ****
+make -j8 all 
+Executing target #6 project_1.siz
+Invoking: Standard S32DS Print Size
+arm-none-eabi-size --format=berkeley  project_1.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1428	      0	   3072	   4500	   1194	project_1.elf
+Finished building: project_1.siz
+ 
+11:45:57 **** Incremental Build of configuration Debug for project project_1 ****
+make -j8 all 
+Executing target #6 project_1.siz
+Invoking: Standard S32DS Print Size
+arm-none-eabi-size --format=berkeley  project_1.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1428	      0	   3072	   4500	   1194	project_1.elf
+Finished building: project_1.siz
+ 
+12:14:14 **** Incremental Build of configuration Debug for project project_1 ****
+make -j8 all 
+Executing target #6 project_1.siz
+Invoking: Standard S32DS Print Size
+arm-none-eabi-size --format=berkeley  project_1.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1428	      0	   3072	   4500	   1194	project_1.elf
+Finished building: project_1.siz
+ 
+12:37:03 **** Incremental Build of configuration Debug for project project_1 ****
+make -j8 all 
+Executing target #6 project_1.siz
+Invoking: Standard S32DS Print Size
+arm-none-eabi-size --format=berkeley  project_1.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1428	      0	   3072	   4500	   1194	project_1.elf
+Finished building: project_1.siz
+ 
+12:51:34 **** Incremental Build of configuration Debug for project project_1 ****
+make -j8 all 
+Executing target #6 project_1.siz
+Invoking: Standard S32DS Print Size
+arm-none-eabi-size --format=berkeley  project_1.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1428	      0	   3072	   4500	   1194	project_1.elf
+Finished building: project_1.siz
+ 
+13:10:17 **** Incremental Build of configuration Debug for project project_1 ****
+make -j8 all 
+Executing target #6 project_1.siz
+Invoking: Standard S32DS Print Size
+arm-none-eabi-size --format=berkeley  project_1.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1428	      0	   3072	   4500	   1194	project_1.elf
+Finished building: project_1.siz
+ 
+13:26:40 **** Incremental Build of configuration Debug for project project_1 ****
+make -j8 all 
+Executing target #6 project_1.siz
+Invoking: Standard S32DS Print Size
+arm-none-eabi-size --format=berkeley  project_1.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1428	      0	   3072	   4500	   1194	project_1.elf
+Finished building: project_1.siz
+ 
+13:35:46 **** Incremental Build of configuration Debug for project project_1 ****
+make -j8 all 
+Executing target #6 project_1.siz
+Invoking: Standard S32DS Print Size
+arm-none-eabi-size --format=berkeley  project_1.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1428	      0	   3072	   4500	   1194	project_1.elf
+Finished building: project_1.siz
+ 
+13:44:18 **** Incremental Build of configuration Debug for project project_1 ****
+make -j8 all 
+Executing target #6 project_1.siz
+Invoking: Standard S32DS Print Size
+arm-none-eabi-size --format=berkeley  project_1.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1428	      0	   3072	   4500	   1194	project_1.elf
+Finished building: project_1.siz
+ 
+13:57:12 **** Incremental Build of configuration Debug for project project_1 ****
+make -j8 all 
+Executing target #6 project_1.siz
+Invoking: Standard S32DS Print Size
+arm-none-eabi-size --format=berkeley  project_1.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1428	      0	   3072	   4500	   1194	project_1.elf
+Finished building: project_1.siz
+ 

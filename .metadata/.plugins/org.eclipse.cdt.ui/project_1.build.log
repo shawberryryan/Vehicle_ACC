@@ -1,0 +1,12 @@
+13:57:12 **** Incremental Build of configuration Debug for project project_1 ****
+make -j8 all 
+Executing target #6 project_1.siz
+Invoking: Standard S32DS Print Size
+arm-none-eabi-size --format=berkeley  project_1.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1428	      0	   3072	   4500	   1194	project_1.elf
+Finished building: project_1.siz
+ 
+
+13:57:14 Build Finished (took 2s.44ms)
+

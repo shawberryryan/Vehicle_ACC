@@ -1,0 +1,383 @@
+!SESSION 2024-04-04 13:02:25.466 -----------------------------------------------
+eclipse.buildId=4.6.2.M20161124-1400
+java.version=1.8.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Framework arguments:  -product com.freescale.s32ds.arm.ide
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product com.freescale.s32ds.arm.ide
+
+!ENTRY org.eclipse.egit.ui 2 0 2024-04-04 13:02:49.940
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\ryshaw'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY com.freescale.s32ds.cross.wizard 2 0 2024-04-04 13:03:00.226
+!MESSAGE No toolchain found for toolchainId: ghs.managedmake.arm.executable.toolchain
+
+!ENTRY com.freescale.s32ds.cross.wizard 2 0 2024-04-04 13:03:00.231
+!MESSAGE No toolchain found for toolchainId: iar.arm.toolchain.v6.1.0
+
+!ENTRY com.freescale.s32ds.cross.wizard 2 0 2024-04-04 13:03:03.343
+!MESSAGE No toolchain found for toolchainId: ghs.managedmake.arm.executable.toolchain
+
+!ENTRY com.freescale.s32ds.cross.wizard 2 0 2024-04-04 13:03:03.348
+!MESSAGE No toolchain found for toolchainId: iar.arm.toolchain.v6.1.0
+
+!ENTRY com.freescale.s32ds.cross.wizard 2 0 2024-04-04 13:03:35.213
+!MESSAGE AddConfig: Added config Name=Debug_RAM
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-04-04 13:03:46.650
+!MESSAGE Indexed 'project_1' (3 sources, 16 headers) in 0.72 sec: 987 declarations; 1,469 references; 0 unresolved inclusions; 1 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.launchbar.core 2 0 2024-04-04 13:05:11.070
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2024-04-04 13:05:11.076
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.equinox.p2.repository 4 1002 2024-04-04 13:07:34.683
+!MESSAGE Communication with repository at http://rxtx.qbang.org/eclipse/ failed.
+!STACK 0
+java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at org.apache.http.impl.io.AbstractSessionInputBuffer.fillBuffer(AbstractSessionInputBuffer.java:160)
+	at org.apache.http.impl.io.SocketInputBuffer.fillBuffer(SocketInputBuffer.java:84)
+	at org.apache.http.impl.io.AbstractSessionInputBuffer.readLine(AbstractSessionInputBuffer.java:273)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:140)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:57)
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:260)
+	at org.apache.http.impl.AbstractHttpClientConnection.receiveResponseHeader(AbstractHttpClientConnection.java:283)
+	at org.apache.http.impl.conn.DefaultClientConnection.receiveResponseHeader(DefaultClientConnection.java:251)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.receiveResponseHeader(ManagedClientConnectionImpl.java:197)
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:271)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:123)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:685)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:487)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:263)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2024-04-04 13:11:43.857
+!MESSAGE Request for monitor: '37^error,msg="No symbol "_mqx_kernel_data" in current context."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2024-04-04 13:11:43.857
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression _mqx_kernel_data
+Error message from debugger back end:
+No symbol "_mqx_kernel_data" in current context.
+!STACK 0
+java.lang.Exception: No symbol "_mqx_kernel_data" in current context.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:941)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:770)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2024-04-04 13:11:43.863
+!MESSAGE Request for monitor: '38^error,msg="No symbol "pxReadyTasksLists" in current context."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2024-04-04 13:11:43.863
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression sizeof(pxReadyTasksLists)
+Error message from debugger back end:
+No symbol "pxReadyTasksLists" in current context.
+!STACK 0
+java.lang.Exception: No symbol "pxReadyTasksLists" in current context.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:941)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:770)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2024-04-04 13:20:08.895
+!MESSAGE Request for monitor: '43^error,msg="No symbol "_mqx_kernel_data" in current context."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2024-04-04 13:20:08.895
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression _mqx_kernel_data
+Error message from debugger back end:
+No symbol "_mqx_kernel_data" in current context.
+!STACK 0
+java.lang.Exception: No symbol "_mqx_kernel_data" in current context.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:941)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:770)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2024-04-04 13:20:08.901
+!MESSAGE Request for monitor: '44^error,msg="No symbol "pxReadyTasksLists" in current context."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2024-04-04 13:20:08.901
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression sizeof(pxReadyTasksLists)
+Error message from debugger back end:
+No symbol "pxReadyTasksLists" in current context.
+!STACK 0
+java.lang.Exception: No symbol "pxReadyTasksLists" in current context.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:941)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:770)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2024-04-04 13:25:54.163
+!MESSAGE Request for monitor: '42^error,msg="No symbol "_mqx_kernel_data" in current context."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2024-04-04 13:25:54.164
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression _mqx_kernel_data
+Error message from debugger back end:
+No symbol "_mqx_kernel_data" in current context.
+!STACK 0
+java.lang.Exception: No symbol "_mqx_kernel_data" in current context.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:941)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:770)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2024-04-04 13:25:54.169
+!MESSAGE Request for monitor: '43^error,msg="No symbol "pxReadyTasksLists" in current context."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2024-04-04 13:25:54.169
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression sizeof(pxReadyTasksLists)
+Error message from debugger back end:
+No symbol "pxReadyTasksLists" in current context.
+!STACK 0
+java.lang.Exception: No symbol "pxReadyTasksLists" in current context.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:941)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:770)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2024-04-04 13:34:39.259
+!MESSAGE Request for monitor: 'RequestMonitor (com.freescale.mqx.gdb.tad.model.VariableReader$1@10b7887): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2024-04-04 13:34:39.259
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2024-04-04 13:34:39.259
+!MESSAGE Request for monitor: 'RequestMonitor (com.nxp.freertos.gdb.tad.model.readers.VariableReader$1@e0a373): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2024-04-04 13:34:39.259
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.core.resources 2 10035 2024-04-04 13:34:39.455
+!MESSAGE The workspace will exit with unsaved changes in this session.
+
+!ENTRY org.eclipse.core.jobs 2 2 2024-04-04 13:34:40.484
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.cdt.dsf.gdb.internal.ui.console.GdbBasicCliConsole$InputReadJob
+!SESSION 2024-04-11 11:37:37.379 -----------------------------------------------
+eclipse.buildId=4.6.2.M20161124-1400
+java.version=1.8.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Framework arguments:  -product com.freescale.s32ds.arm.ide
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product com.freescale.s32ds.arm.ide
+
+!ENTRY org.eclipse.core.resources 2 10035 2024-04-11 11:37:47.823
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.egit.ui 2 0 2024-04-11 11:37:55.641
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\ryshaw'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.launchbar.core 2 0 2024-04-11 11:45:55.886
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2024-04-11 11:45:55.895
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2024-04-11 12:11:58.473
+!MESSAGE Request for monitor: '43^error,msg="No symbol "pxReadyTasksLists" in current context."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2024-04-11 12:11:58.473
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression sizeof(pxReadyTasksLists)
+Error message from debugger back end:
+No symbol "pxReadyTasksLists" in current context.
+!STACK 0
+java.lang.Exception: No symbol "pxReadyTasksLists" in current context.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:941)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:770)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2024-04-11 12:11:58.487
+!MESSAGE Request for monitor: '44^error,msg="No symbol "_mqx_kernel_data" in current context."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2024-04-11 12:11:58.487
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression _mqx_kernel_data
+Error message from debugger back end:
+No symbol "_mqx_kernel_data" in current context.
+!STACK 0
+java.lang.Exception: No symbol "_mqx_kernel_data" in current context.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:941)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:770)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2024-04-11 12:28:36.550
+!MESSAGE Request for monitor: '45^error,msg="No symbol "_mqx_kernel_data" in current context."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2024-04-11 12:28:36.550
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression _mqx_kernel_data
+Error message from debugger back end:
+No symbol "_mqx_kernel_data" in current context.
+!STACK 0
+java.lang.Exception: No symbol "_mqx_kernel_data" in current context.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:941)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:770)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2024-04-11 12:28:36.561
+!MESSAGE Request for monitor: '46^error,msg="No symbol "pxReadyTasksLists" in current context."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2024-04-11 12:28:36.561
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression sizeof(pxReadyTasksLists)
+Error message from debugger back end:
+No symbol "pxReadyTasksLists" in current context.
+!STACK 0
+java.lang.Exception: No symbol "pxReadyTasksLists" in current context.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:941)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:770)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2024-04-11 12:40:22.381
+!MESSAGE Request for monitor: '45^error,msg="No symbol "_mqx_kernel_data" in current context."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2024-04-11 12:40:22.381
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression _mqx_kernel_data
+Error message from debugger back end:
+No symbol "_mqx_kernel_data" in current context.
+!STACK 0
+java.lang.Exception: No symbol "_mqx_kernel_data" in current context.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:941)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:770)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2024-04-11 12:40:22.392
+!MESSAGE Request for monitor: '46^error,msg="No symbol "pxReadyTasksLists" in current context."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2024-04-11 12:40:22.392
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression sizeof(pxReadyTasksLists)
+Error message from debugger back end:
+No symbol "pxReadyTasksLists" in current context.
+!STACK 0
+java.lang.Exception: No symbol "pxReadyTasksLists" in current context.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:941)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:770)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2024-04-11 13:10:08.224
+!MESSAGE Request for monitor: '45^error,msg="No symbol "_mqx_kernel_data" in current context."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2024-04-11 13:10:08.224
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression _mqx_kernel_data
+Error message from debugger back end:
+No symbol "_mqx_kernel_data" in current context.
+!STACK 0
+java.lang.Exception: No symbol "_mqx_kernel_data" in current context.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:941)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:770)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2024-04-11 13:10:08.235
+!MESSAGE Request for monitor: '46^error,msg="No symbol "pxReadyTasksLists" in current context."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2024-04-11 13:10:08.235
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression sizeof(pxReadyTasksLists)
+Error message from debugger back end:
+No symbol "pxReadyTasksLists" in current context.
+!STACK 0
+java.lang.Exception: No symbol "pxReadyTasksLists" in current context.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:941)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:770)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2024-04-11 13:23:48.662
+!MESSAGE Request for monitor: '45^error,msg="No symbol "_mqx_kernel_data" in current context."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2024-04-11 13:23:48.662
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression _mqx_kernel_data
+Error message from debugger back end:
+No symbol "_mqx_kernel_data" in current context.
+!STACK 0
+java.lang.Exception: No symbol "_mqx_kernel_data" in current context.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:941)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:770)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2024-04-11 13:23:48.672
+!MESSAGE Request for monitor: '46^error,msg="No symbol "pxReadyTasksLists" in current context."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2024-04-11 13:23:48.672
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression sizeof(pxReadyTasksLists)
+Error message from debugger back end:
+No symbol "pxReadyTasksLists" in current context.
+!STACK 0
+java.lang.Exception: No symbol "pxReadyTasksLists" in current context.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:941)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:770)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2024-04-11 13:30:52.359
+!MESSAGE Request for monitor: '45^error,msg="No symbol "_mqx_kernel_data" in current context."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2024-04-11 13:30:52.359
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression _mqx_kernel_data
+Error message from debugger back end:
+No symbol "_mqx_kernel_data" in current context.
+!STACK 0
+java.lang.Exception: No symbol "_mqx_kernel_data" in current context.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:941)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:770)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2024-04-11 13:30:52.371
+!MESSAGE Request for monitor: '46^error,msg="No symbol "pxReadyTasksLists" in current context."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2024-04-11 13:30:52.371
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression sizeof(pxReadyTasksLists)
+Error message from debugger back end:
+No symbol "pxReadyTasksLists" in current context.
+!STACK 0
+java.lang.Exception: No symbol "pxReadyTasksLists" in current context.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:941)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:770)
+
+!ENTRY org.eclipse.core.jobs 2 2 2024-04-11 13:31:00.750
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.cdt.dsf.gdb.internal.ui.console.GdbBasicCliConsole$InputReadJob
+!SESSION 2024-04-11 13:34:29.814 -----------------------------------------------
+eclipse.buildId=4.6.2.M20161124-1400
+java.version=1.8.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Framework arguments:  -product com.freescale.s32ds.arm.ide
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product com.freescale.s32ds.arm.ide
+
+!ENTRY org.eclipse.egit.ui 2 0 2024-04-11 13:34:50.058
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\ryshaw'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.launchbar.core 2 0 2024-04-11 13:35:45.023
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2024-04-11 13:35:45.038
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2024-04-11 13:51:17.589
+!MESSAGE Request for monitor: '45^error,msg="No symbol "pxReadyTasksLists" in current context."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2024-04-11 13:51:17.590
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression sizeof(pxReadyTasksLists)
+Error message from debugger back end:
+No symbol "pxReadyTasksLists" in current context.
+!STACK 0
+java.lang.Exception: No symbol "pxReadyTasksLists" in current context.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:941)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:770)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2024-04-11 13:51:17.599
+!MESSAGE Request for monitor: '46^error,msg="No symbol "_mqx_kernel_data" in current context."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2024-04-11 13:51:17.599
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression _mqx_kernel_data
+Error message from debugger back end:
+No symbol "_mqx_kernel_data" in current context.
+!STACK 0
+java.lang.Exception: No symbol "_mqx_kernel_data" in current context.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:941)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:770)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2024-04-11 14:01:30.660
+!MESSAGE Request for monitor: 'RequestMonitor (com.freescale.mqx.gdb.tad.model.VariableReader$1@56081c): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2024-04-11 14:01:30.660
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2024-04-11 14:01:30.676
+!MESSAGE Request for monitor: 'RequestMonitor (com.nxp.freertos.gdb.tad.model.readers.VariableReader$1@3b4d82): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2024-04-11 14:01:30.676
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.core.resources 2 10035 2024-04-11 14:01:30.849
+!MESSAGE The workspace will exit with unsaved changes in this session.
+
+!ENTRY org.eclipse.core.jobs 2 2 2024-04-11 14:01:31.774
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.cdt.dsf.gdb.internal.ui.console.GdbBasicCliConsole$InputReadJob
