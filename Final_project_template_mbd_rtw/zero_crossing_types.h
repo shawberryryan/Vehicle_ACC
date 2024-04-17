@@ -7,10 +7,10 @@
  *
  * Code generated for Simulink model 'Final_project_template'.
  *
- * Model version                   : 10.22
+ * Model version                   : 10.27
  * Simulink Coder version          : 9.8 (R2022b) 13-May-2022
  * MBDT for S32K1xx Series Version : 4.3.0 (R2016a-R2022a) 13-Sep-2022
- * C/C++ source code generated on  : Thu Apr 11 13:55:15 2024
+ * C/C++ source code generated on  : Wed Apr 17 17:22:11 2024
  *
  * Target selection: mbd_s32k.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex

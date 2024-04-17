@@ -3,7 +3,7 @@
 % My Parameters ===========================================================
 % CAN bus inputs
 % base_ids = [100, 0, 0, 0, 0, 0]; % receive only GSI station
-base_ids = [10, 20, 30, 40, 50, 70]; % receive all other stations
+base_ids = [10, 20, 40, 50, 60, 70]; % receive all other stations
 % Permute station ids to receive all stations except your own
 
 
@@ -19,10 +19,10 @@ dc_satlow = .24;
 % Auto Steering
 % Tune steering controllers here
 n_desired = 0;
-S_Kd1 = 0.0875; % outer loop
-S_Kp1 = 0.6250;
-S_Kp2 = 1473.5; % inner loop
-S_Kd2 = 127.43;
+S_Kd1 = 0.0331; % outer loop
+S_Kp1 = 0.2367;
+S_Kp2 = 473.4515; % inner loop
+S_Kd2 = 137.4300;
 
 % Given ===================================================================
 % Vehicle specs

@@ -7,10 +7,10 @@
  *
  * Code generated for Simulink model 'Final_project_template'.
  *
- * Model version                   : 10.22
+ * Model version                   : 10.27
  * Simulink Coder version          : 9.8 (R2022b) 13-May-2022
  * MBDT for S32K1xx Series Version : 4.3.0 (R2016a-R2022a) 13-Sep-2022
- * C/C++ source code generated on  : Thu Apr 11 13:55:15 2024
+ * C/C++ source code generated on  : Wed Apr 17 17:22:11 2024
  *
  * Target selection: mbd_s32k.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -25,7 +25,7 @@
 #include <math.h>
 #include "zero_crossing_types.h"
 
-/* Named constants for Chart: '<S29>/Chart' */
+/* Named constants for Chart: '<S30>/Chart' */
 #define IN_Manual                      ((uint8_T)1U)
 #define IN_PosCtrl                     ((uint8_T)2U)
 #define IN_VelCtrl                     ((uint8_T)3U)
@@ -173,32 +173,32 @@ void Final_project_template_step0(void) /* Sample time: [0.0005s, 0.0s] */
   /* S-Function (fcgen): '<S4>/Function-Call Generator2' incorporates:
    *  SubSystem: '<S4>/UART Iteration'
    */
-  /* Outputs for Resettable SubSystem: '<S73>/Resettable Subsystem' incorporates:
-   *  ResetPort: '<S74>/Reset'
+  /* Outputs for Resettable SubSystem: '<S78>/Resettable Subsystem' incorporates:
+   *  ResetPort: '<S79>/Reset'
    */
   if (((rtPrevZCX.ResettableSubsystem_Reset_ZCE == POS_ZCSIG) != (int32_T)
        rtB.RT_k) && (rtPrevZCX.ResettableSubsystem_Reset_ZCE !=
                      UNINITIALIZED_ZCSIG)) {
-    /* InitializeConditions for Delay: '<S74>/Delay' */
+    /* InitializeConditions for Delay: '<S79>/Delay' */
     rtDW.Delay_DSTATE = 0.0;
   }
 
   rtPrevZCX.ResettableSubsystem_Reset_ZCE = rtB.RT_k;
 
-  /* Sum: '<S74>/Sum' incorporates:
-   *  Constant: '<S74>/Constant'
-   *  Delay: '<S74>/Delay'
+  /* Sum: '<S79>/Sum' incorporates:
+   *  Constant: '<S79>/Constant'
+   *  Delay: '<S79>/Delay'
    */
   rtDW.Delay_DSTATE++;
 
-  /* End of Outputs for SubSystem: '<S73>/Resettable Subsystem' */
+  /* End of Outputs for SubSystem: '<S78>/Resettable Subsystem' */
 
-  /* MultiPortSwitch: '<S73>/Index Vector' incorporates:
-   *  Delay: '<S74>/Delay'
+  /* MultiPortSwitch: '<S78>/Index Vector' incorporates:
+   *  Delay: '<S79>/Delay'
    */
   rtB.IndexVector = rtB.RT1[(int32_T)rtDW.Delay_DSTATE - 1];
 
-  /* S-Function (lpuart_s32k_transmit): '<S73>/LPUART_Transmit' */
+  /* S-Function (lpuart_s32k_transmit): '<S78>/LPUART_Transmit' */
   {
     LPUART_DRV_SendData(1, &rtB.IndexVector, 1);
   }
@@ -270,9 +270,13 @@ void Final_project_template_step1(void) /* Sample time: [0.01s, 0.0s] */
   /* local block i/o variables */
   real_T rtb_DataTypeConversion;
   real_T rtb_dsdt;
+  real_T rtb_TSamp_tmp;
   real32_T rtb_Conversion;
   real32_T rtb_Gain_ie;
-  real32_T rtb_Sum1_e;
+  real32_T rtb_Product_m_idx_0;
+  real32_T rtb_Product_m_idx_1;
+  real32_T rtb_Sum1_j;
+  real32_T rtb_Sum1_k;
   uint32_T HighLevelDesign_ELAPS_T;
 
   /* End of Outputs for S-Function (fcan_s32k_isr): '<S1>/FCAN_Isr' */
@@ -290,7 +294,7 @@ void Final_project_template_step1(void) /* Sample time: [0.01s, 0.0s] */
   rtDW.HighLevelDesign_PREV_T = rtM->Timing.clockTick1;
   rtDW.HighLevelDesign_RESET_ELAPS_T = false;
 
-  /* S-Function (gpio_s32k_input): '<S26>/Digital_Input' */
+  /* S-Function (gpio_s32k_input): '<S27>/Digital_Input' */
 
   /* GPIPORTE14 signal update */
   rtB.Digital_Input = (PINS_DRV_ReadPins(PTE) >> 14) & 0x01;
@@ -321,7 +325,7 @@ void Final_project_template_step1(void) /* Sample time: [0.01s, 0.0s] */
   rtB.snpsiusCars16[22] = rtB.ByteUnpacking_o1;
   rtB.snpsiusCars16[23] = rtB.ByteUnpacking_o2;
 
-  /* SignalConversion generated from: '<S29>/S-Function Builder' incorporates:
+  /* SignalConversion generated from: '<S30>/S-Function Builder' incorporates:
    *  UnitDelay: '<S2>/Unit Delay'
    */
   rtB.TmpSignalConversionAtSFunctionB[0] = rtDW.UnitDelay_DSTATE[0];
@@ -331,11 +335,11 @@ void Final_project_template_step1(void) /* Sample time: [0.01s, 0.0s] */
   memcpy(&rtB.TmpSignalConversionAtSFunctionB[4], &rtB.snpsiusCars16[0], 24U *
          sizeof(real32_T));
 
-  /* S-Function (ahead_logic): '<S29>/S-Function Builder' */
+  /* S-Function (ahead_logic): '<S30>/S-Function Builder' */
   ahead_logic_Outputs_wrapper(&rtB.TmpSignalConversionAtSFunctionB[0],
     &rtB.SFunctionBuilder_o1, &rtB.SFunctionBuilder_o2);
 
-  /* Chart: '<S29>/Chart' incorporates:
+  /* Chart: '<S30>/Chart' incorporates:
    *  UnitDelay: '<S2>/Unit Delay'
    */
   if (rtDW.is_active_c3_Final_project_temp == 0U) {
@@ -393,7 +397,7 @@ void Final_project_template_step1(void) /* Sample time: [0.01s, 0.0s] */
     }
   }
 
-  /* End of Chart: '<S29>/Chart' */
+  /* End of Chart: '<S30>/Chart' */
 
   /* S-Function (gpio_s32k_output): '<S25>/Digital_Output' */
 
@@ -422,7 +426,7 @@ void Final_project_template_step1(void) /* Sample time: [0.01s, 0.0s] */
     PINS_DRV_ClearPins(PTD, 1UL<<10);
   }
 
-  /* S-Function (adc_s32k_start): '<S37>/ADC_Start' */
+  /* S-Function (adc_s32k_start): '<S42>/ADC_Start' */
   {
     adc_chan_config_t adc0_chan_cfg = {
       .interruptEnable = false,
@@ -440,14 +444,14 @@ void Final_project_template_step1(void) /* Sample time: [0.01s, 0.0s] */
   }
 
   /* Outputs for Enabled SubSystem: '<S25>/Enabled Subsystem' incorporates:
-   *  EnablePort: '<S30>/Enable'
+   *  EnablePort: '<S31>/Enable'
    */
   if (rtB.man) {
     /* Merge: '<S25>/Merge' incorporates:
-     *  Constant: '<S37>/Constant'
-     *  Gain: '<S37>/Gain'
-     *  SignalConversion generated from: '<S30>/Throttle'
-     *  Sum: '<S37>/Sum'
+     *  Constant: '<S42>/Constant'
+     *  Gain: '<S42>/Gain'
+     *  SignalConversion generated from: '<S31>/Throttle'
+     *  Sum: '<S42>/Sum'
      */
     rtB.Merge = ((real32_T)rtB.ADC_Start - 512.0F) * 0.75F;
   }
@@ -455,19 +459,19 @@ void Final_project_template_step1(void) /* Sample time: [0.01s, 0.0s] */
   /* End of Outputs for SubSystem: '<S25>/Enabled Subsystem' */
 
   /* Outputs for Enabled SubSystem: '<S25>/Position Ctrl' incorporates:
-   *  EnablePort: '<S31>/Enable'
+   *  EnablePort: '<S32>/Enable'
    */
   if (rtB.pos) {
     /* Merge: '<S25>/Merge' incorporates:
      *  Constant: '<S25>/Constant'
-     *  Gain: '<S31>/D-gain'
-     *  Gain: '<S31>/Feed-forward'
-     *  Gain: '<S31>/P-gain'
-     *  Sum: '<S31>/Sum1'
-     *  Sum: '<S31>/Sum2'
-     *  Sum: '<S31>/Sum3'
-     *  Sum: '<S31>/Sum4'
-     *  Sum: '<S31>/Sum5'
+     *  Gain: '<S32>/D-gain'
+     *  Gain: '<S32>/Feed-forward'
+     *  Gain: '<S32>/P-gain'
+     *  Sum: '<S32>/Sum1'
+     *  Sum: '<S32>/Sum2'
+     *  Sum: '<S32>/Sum3'
+     *  Sum: '<S32>/Sum4'
+     *  Sum: '<S32>/Sum5'
      *  UnitDelay: '<S2>/Unit Delay'
      */
     rtB.Merge = ((20.0F - (rtB.SFunctionBuilder_o1 - rtDW.UnitDelay_DSTATE[0])) *
@@ -477,64 +481,64 @@ void Final_project_template_step1(void) /* Sample time: [0.01s, 0.0s] */
 
   /* End of Outputs for SubSystem: '<S25>/Position Ctrl' */
 
-  /* S-Function (gpio_s32k_input): '<S36>/Digital_Input' */
+  /* S-Function (gpio_s32k_input): '<S41>/Digital_Input' */
 
   /* GPIPORTE6 signal update */
   rtB.Digital_Input_g = (PINS_DRV_ReadPins(PTE) >> 6) & 0x01;
 
-  /* S-Function (gpio_s32k_input): '<S36>/Digital_Input1' */
+  /* S-Function (gpio_s32k_input): '<S41>/Digital_Input1' */
 
   /* GPIPORTE7 signal update */
   rtB.Digital_Input1 = (PINS_DRV_ReadPins(PTE) >> 7) & 0x01;
 
-  /* S-Function (gpio_s32k_input): '<S36>/Digital_Input2' */
+  /* S-Function (gpio_s32k_input): '<S41>/Digital_Input2' */
 
   /* GPIPORTE8 signal update */
   rtB.Digital_Input2 = (PINS_DRV_ReadPins(PTE) >> 8) & 0x01;
 
-  /* S-Function (gpio_s32k_input): '<S36>/Digital_Input3' */
+  /* S-Function (gpio_s32k_input): '<S41>/Digital_Input3' */
 
   /* GPIPORTE9 signal update */
   rtB.Digital_Input3 = (PINS_DRV_ReadPins(PTE) >> 9) & 0x01;
 
-  /* S-Function (gpio_s32k_input): '<S36>/Digital_Input4' */
+  /* S-Function (gpio_s32k_input): '<S41>/Digital_Input4' */
 
   /* GPIPORTE10 signal update */
   rtB.Digital_Input4 = (PINS_DRV_ReadPins(PTE) >> 10) & 0x01;
 
-  /* S-Function (gpio_s32k_input): '<S36>/Digital_Input5' */
+  /* S-Function (gpio_s32k_input): '<S41>/Digital_Input5' */
 
   /* GPIPORTE11 signal update */
   rtB.Digital_Input5 = (PINS_DRV_ReadPins(PTE) >> 11) & 0x01;
 
-  /* S-Function (gpio_s32k_input): '<S36>/Digital_Input6' */
+  /* S-Function (gpio_s32k_input): '<S41>/Digital_Input6' */
 
   /* GPIPORTE12 signal update */
   rtB.Digital_Input6 = (PINS_DRV_ReadPins(PTE) >> 12) & 0x01;
 
-  /* S-Function (gpio_s32k_input): '<S36>/Digital_Input7' */
+  /* S-Function (gpio_s32k_input): '<S41>/Digital_Input7' */
 
   /* GPIPORTE13 signal update */
   rtB.Digital_Input7 = (PINS_DRV_ReadPins(PTE) >> 13) & 0x01;
 
-  /* Gain: '<S36>/Gain' incorporates:
-   *  ArithShift: '<S36>/Shift Arithmetic1'
-   *  ArithShift: '<S36>/Shift Arithmetic2'
-   *  ArithShift: '<S36>/Shift Arithmetic3'
-   *  ArithShift: '<S36>/Shift Arithmetic4'
-   *  ArithShift: '<S36>/Shift Arithmetic5'
-   *  ArithShift: '<S36>/Shift Arithmetic6'
-   *  ArithShift: '<S36>/Shift Arithmetic7'
-   *  DataTypeConversion: '<S36>/Data Type Conversion'
-   *  DataTypeConversion: '<S36>/Data Type Conversion1'
-   *  DataTypeConversion: '<S36>/Data Type Conversion2'
-   *  DataTypeConversion: '<S36>/Data Type Conversion3'
-   *  DataTypeConversion: '<S36>/Data Type Conversion4'
-   *  DataTypeConversion: '<S36>/Data Type Conversion5'
-   *  DataTypeConversion: '<S36>/Data Type Conversion6'
-   *  DataTypeConversion: '<S36>/Data Type Conversion7'
-   *  DataTypeConversion: '<S36>/Data Type Conversion8'
-   *  Sum: '<S36>/Add'
+  /* Gain: '<S41>/Gain' incorporates:
+   *  ArithShift: '<S41>/Shift Arithmetic1'
+   *  ArithShift: '<S41>/Shift Arithmetic2'
+   *  ArithShift: '<S41>/Shift Arithmetic3'
+   *  ArithShift: '<S41>/Shift Arithmetic4'
+   *  ArithShift: '<S41>/Shift Arithmetic5'
+   *  ArithShift: '<S41>/Shift Arithmetic6'
+   *  ArithShift: '<S41>/Shift Arithmetic7'
+   *  DataTypeConversion: '<S41>/Data Type Conversion'
+   *  DataTypeConversion: '<S41>/Data Type Conversion1'
+   *  DataTypeConversion: '<S41>/Data Type Conversion2'
+   *  DataTypeConversion: '<S41>/Data Type Conversion3'
+   *  DataTypeConversion: '<S41>/Data Type Conversion4'
+   *  DataTypeConversion: '<S41>/Data Type Conversion5'
+   *  DataTypeConversion: '<S41>/Data Type Conversion6'
+   *  DataTypeConversion: '<S41>/Data Type Conversion7'
+   *  DataTypeConversion: '<S41>/Data Type Conversion8'
+   *  Sum: '<S41>/Add'
    */
   rtb_Gain_ie = (real32_T)((int32_T)(((((((uint32_T)(rtB.Digital_Input1 << 1) +
     rtB.Digital_Input_g) + (uint32_T)(rtB.Digital_Input2 << 2)) + (uint32_T)
@@ -543,35 +547,35 @@ void Final_project_template_step1(void) /* Sample time: [0.01s, 0.0s] */
     + (rtB.Digital_Input7 << 7)) * 0.25F;
 
   /* Outputs for Enabled SubSystem: '<S25>/Speed Ctrl' incorporates:
-   *  EnablePort: '<S32>/Enable'
+   *  EnablePort: '<S33>/Enable'
    */
   if (rtB.vel) {
-    /* Sum: '<S32>/Sum1' incorporates:
+    /* Sum: '<S33>/Sum1' incorporates:
      *  UnitDelay: '<S2>/Unit Delay'
      */
-    rtb_Sum1_e = rtb_Gain_ie - rtDW.UnitDelay_DSTATE[3];
+    rtb_Sum1_k = rtb_Gain_ie - rtDW.UnitDelay_DSTATE[3];
 
     /* Merge: '<S25>/Merge' incorporates:
-     *  Gain: '<S32>/Gain'
-     *  Gain: '<S34>/Gain1'
-     *  Sum: '<S32>/Sum'
-     *  Sum: '<S34>/Sum'
-     *  UnitDelay: '<S35>/Unit Delay'
+     *  Gain: '<S33>/Gain'
+     *  Gain: '<S35>/Gain1'
+     *  Sum: '<S33>/Sum'
+     *  Sum: '<S35>/Sum'
+     *  UnitDelay: '<S36>/Unit Delay'
      */
-    rtB.Merge = (5000.0F * rtb_Sum1_e + rtDW.UnitDelay_DSTATE_o) + 100.0F *
+    rtB.Merge = (5000.0F * rtb_Sum1_k + rtDW.UnitDelay_DSTATE_o) + 100.0F *
       rtb_Gain_ie;
 
-    /* Sum: '<S35>/Sum' incorporates:
-     *  Gain: '<S34>/Gain'
+    /* Sum: '<S36>/Sum' incorporates:
      *  Gain: '<S35>/Gain'
-     *  UnitDelay: '<S35>/Unit Delay'
+     *  Gain: '<S36>/Gain'
+     *  UnitDelay: '<S36>/Unit Delay'
      */
-    rtDW.UnitDelay_DSTATE_o += 50.0F * rtb_Sum1_e * 0.01F;
+    rtDW.UnitDelay_DSTATE_o += 50.0F * rtb_Sum1_k * 0.01F;
   }
 
   /* End of Outputs for SubSystem: '<S25>/Speed Ctrl' */
 
-  /* S-Function (ftm_s32k_quadrature_decoder): '<S38>/Quadrature_Decoder' */
+  /* S-Function (ftm_s32k_quadrature_decoder): '<S43>/Quadrature_Decoder' */
 
   /* FTM2: get counter value */
   rtB.Quadrature_Decoder_o2 = FTM_DRV_GetQuadDir(FTM2);
@@ -580,107 +584,102 @@ void Final_project_template_step1(void) /* Sample time: [0.01s, 0.0s] */
   rtB.Quadrature_Decoder_o1 = FTM_DRV_GetCounter(FTM2);
   FTM_DRV_ClearTimerOverflow(FTM2);
 
-  /* Sum: '<S39>/Sum1' incorporates:
-   *  DataTypeConversion: '<S39>/Data Type Conversion1'
-   *  DataTypeConversion: '<S39>/Data Type Conversion2'
-   *  Gain: '<S39>/Gain'
-   *  Sum: '<S39>/Sum'
-   *  UnitDelay: '<S39>/Unit Delay'
-   *  UnitDelay: '<S39>/Unit Delay1'
+  /* Sum: '<S44>/Sum1' incorporates:
+   *  DataTypeConversion: '<S44>/Data Type Conversion1'
+   *  DataTypeConversion: '<S44>/Data Type Conversion2'
+   *  Gain: '<S44>/Gain'
+   *  Sum: '<S44>/Sum'
+   *  UnitDelay: '<S44>/Unit Delay'
+   *  UnitDelay: '<S44>/Unit Delay1'
    */
   rtDW.UnitDelay1_DSTATE += (real32_T)(int16_T)(rtB.Quadrature_Decoder_o1 -
     rtDW.UnitDelay_DSTATE_c) * 0.09F;
 
-  /* Gain: '<S26>/Gain' incorporates:
-   *  Gain: '<S38>/Gain'
-   *  UnitDelay: '<S39>/Unit Delay1'
+  /* Gain: '<S27>/Gain' incorporates:
+   *  Gain: '<S43>/Gain'
+   *  UnitDelay: '<S44>/Unit Delay1'
    */
   rtB.Gain = 0.0174532924F * rtDW.UnitDelay1_DSTATE * -0.2F;
 
-  /* S-Function (gpio_s32k_input): '<S26>/Digital_Input1' */
-
-  /* GPIPORTE15 signal update */
-  rtB.Digital_Input1_b = (PINS_DRV_ReadPins(PTE) >> 15) & 0x01;
-
-  /* Outputs for Atomic SubSystem: '<S28>/Vehicle Dynamics' */
-  /* DiscreteIntegrator: '<S60>/Discrete-Time Integrator' */
+  /* Outputs for Atomic SubSystem: '<S29>/Vehicle Dynamics' */
+  /* DiscreteIntegrator: '<S65>/Discrete-Time Integrator' */
   if (rtDW.DiscreteTimeIntegrator_SYSTEM_E != 0) {
-    /* DiscreteIntegrator: '<S60>/Discrete-Time Integrator' */
+    /* DiscreteIntegrator: '<S65>/Discrete-Time Integrator' */
     rtB.DiscreteTimeIntegrator = rtDW.DiscreteTimeIntegrator_DSTATE;
   } else {
-    /* DiscreteIntegrator: '<S60>/Discrete-Time Integrator' */
+    /* DiscreteIntegrator: '<S65>/Discrete-Time Integrator' */
     rtB.DiscreteTimeIntegrator = 0.01F * (real32_T)HighLevelDesign_ELAPS_T
       * rtDW.DiscreteTimeIntegrator_PREV_U + rtDW.DiscreteTimeIntegrator_DSTATE;
   }
 
-  /* End of DiscreteIntegrator: '<S60>/Discrete-Time Integrator' */
+  /* End of DiscreteIntegrator: '<S65>/Discrete-Time Integrator' */
 
-  /* DiscreteIntegrator: '<S62>/Discrete-Time Integrator2' */
+  /* DiscreteIntegrator: '<S67>/Discrete-Time Integrator2' */
   if (rtDW.DiscreteTimeIntegrator2_SYSTEM_ != 0) {
-    /* DiscreteIntegrator: '<S62>/Discrete-Time Integrator2' */
+    /* DiscreteIntegrator: '<S67>/Discrete-Time Integrator2' */
     rtB.DiscreteTimeIntegrator2 = rtDW.DiscreteTimeIntegrator2_DSTATE;
   } else {
-    /* DiscreteIntegrator: '<S62>/Discrete-Time Integrator2' */
+    /* DiscreteIntegrator: '<S67>/Discrete-Time Integrator2' */
     rtB.DiscreteTimeIntegrator2 = 0.01F * (real32_T)HighLevelDesign_ELAPS_T
       * rtDW.DiscreteTimeIntegrator2_PREV_U +
       rtDW.DiscreteTimeIntegrator2_DSTATE;
   }
 
-  /* End of DiscreteIntegrator: '<S62>/Discrete-Time Integrator2' */
+  /* End of DiscreteIntegrator: '<S67>/Discrete-Time Integrator2' */
 
-  /* S-Function (model): '<S61>/S-Function Builder' */
+  /* S-Function (model): '<S66>/S-Function Builder' */
   model_Outputs_wrapper(&rtB.DiscreteTimeIntegrator, &rtB.Gain,
                         &rtB.DiscreteTimeIntegrator2, &rtB.SFunctionBuilder_o1_b,
                         &rtB.SFunctionBuilder_o2_i, &rtB.SFunctionBuilder_o3,
                         &rtConstP.pooled6, 1, &rtConstP.pooled6, 1);
 
-  /* DiscreteIntegrator: '<S62>/Discrete-Time Integrator' */
+  /* DiscreteIntegrator: '<S67>/Discrete-Time Integrator' */
   if (rtDW.DiscreteTimeIntegrator_SYSTEM_b == 0) {
-    /* DiscreteIntegrator: '<S62>/Discrete-Time Integrator' */
+    /* DiscreteIntegrator: '<S67>/Discrete-Time Integrator' */
     rtDW.DiscreteTimeIntegrator_DSTATE_k += 0.01F * (real32_T)
       HighLevelDesign_ELAPS_T * rtDW.DiscreteTimeIntegrator_PREV_U_d;
   }
 
-  /* End of DiscreteIntegrator: '<S62>/Discrete-Time Integrator' */
+  /* End of DiscreteIntegrator: '<S67>/Discrete-Time Integrator' */
 
-  /* DiscreteIntegrator: '<S62>/Discrete-Time Integrator1' */
+  /* DiscreteIntegrator: '<S67>/Discrete-Time Integrator1' */
   if (rtDW.DiscreteTimeIntegrator1_SYSTEM_ == 0) {
-    /* DiscreteIntegrator: '<S62>/Discrete-Time Integrator1' */
+    /* DiscreteIntegrator: '<S67>/Discrete-Time Integrator1' */
     rtDW.DiscreteTimeIntegrator1_DSTATE += 0.01F * (real32_T)
       HighLevelDesign_ELAPS_T * rtDW.DiscreteTimeIntegrator1_PREV_U;
   }
 
-  /* End of DiscreteIntegrator: '<S62>/Discrete-Time Integrator1' */
+  /* End of DiscreteIntegrator: '<S67>/Discrete-Time Integrator1' */
 
-  /* Update for DiscreteIntegrator: '<S60>/Discrete-Time Integrator' incorporates:
-   *  Gain: '<S60>/Gain'
-   *  Gain: '<S60>/Gain1'
-   *  Sum: '<S60>/Sum'
+  /* Update for DiscreteIntegrator: '<S65>/Discrete-Time Integrator' incorporates:
+   *  Gain: '<S65>/Gain'
+   *  Gain: '<S65>/Gain1'
+   *  Sum: '<S65>/Sum'
    */
   rtDW.DiscreteTimeIntegrator_SYSTEM_E = 0U;
   rtDW.DiscreteTimeIntegrator_DSTATE = rtB.DiscreteTimeIntegrator;
   rtDW.DiscreteTimeIntegrator_PREV_U = (rtB.Merge - 100.0F *
     rtB.DiscreteTimeIntegrator) * 0.0005F;
 
-  /* Update for DiscreteIntegrator: '<S62>/Discrete-Time Integrator2' */
+  /* Update for DiscreteIntegrator: '<S67>/Discrete-Time Integrator2' */
   rtDW.DiscreteTimeIntegrator2_SYSTEM_ = 0U;
   rtDW.DiscreteTimeIntegrator2_DSTATE = rtB.DiscreteTimeIntegrator2;
   rtDW.DiscreteTimeIntegrator2_PREV_U = rtB.SFunctionBuilder_o3;
 
-  /* Update for DiscreteIntegrator: '<S62>/Discrete-Time Integrator' */
+  /* Update for DiscreteIntegrator: '<S67>/Discrete-Time Integrator' */
   rtDW.DiscreteTimeIntegrator_SYSTEM_b = 0U;
   rtDW.DiscreteTimeIntegrator_PREV_U_d = rtB.SFunctionBuilder_o1_b;
 
-  /* Update for DiscreteIntegrator: '<S62>/Discrete-Time Integrator1' */
+  /* Update for DiscreteIntegrator: '<S67>/Discrete-Time Integrator1' */
   rtDW.DiscreteTimeIntegrator1_SYSTEM_ = 0U;
   rtDW.DiscreteTimeIntegrator1_PREV_U = rtB.SFunctionBuilder_o2_i;
 
-  /* End of Outputs for SubSystem: '<S28>/Vehicle Dynamics' */
+  /* End of Outputs for SubSystem: '<S29>/Vehicle Dynamics' */
 
-  /* UnitDelay: '<S69>/Unit Delay' */
+  /* UnitDelay: '<S74>/Unit Delay' */
   rtB.UnitDelay = rtDW.UnitDelay_DSTATE_i;
 
-  /* S-Function (get_path1): '<S66>/Look up P' */
+  /* S-Function (get_path1): '<S71>/Look up P' */
   {
     extern struct road_seg_type rs[MAX_RS];
     real_T p, u_alt;
@@ -729,11 +728,11 @@ void Final_project_template_step1(void) /* Sample time: [0.01s, 0.0s] */
     }
   }
 
-  /* Sum: '<S66>/Sum' */
-  rtb_Gain_ie = rtDW.DiscreteTimeIntegrator_DSTATE_k - rtB.LookupP_o1;
-  rtb_Sum1_e = rtDW.DiscreteTimeIntegrator1_DSTATE - rtB.LookupP_o2;
+  /* Sum: '<S71>/Sum' */
+  rtb_Product_m_idx_0 = rtDW.DiscreteTimeIntegrator_DSTATE_k - rtB.LookupP_o1;
+  rtb_Product_m_idx_1 = rtDW.DiscreteTimeIntegrator1_DSTATE - rtB.LookupP_o2;
 
-  /* S-Function (get_rvec1): '<S66>/Look up Right Vector' */
+  /* S-Function (get_rvec1): '<S71>/Look up Right Vector' */
   {
     extern struct road_seg_type rs[MAX_RS];
     real_T p, u_alt;
@@ -794,13 +793,74 @@ void Final_project_template_step1(void) /* Sample time: [0.01s, 0.0s] */
     }
   }
 
-  /* Sum: '<S71>/Sum1' incorporates:
-   *  Product: '<S71>/Product'
+  /* Sum: '<S76>/Sum1' incorporates:
+   *  Product: '<S76>/Product'
    */
-  rtB.Sum1 = rtb_Gain_ie * rtB.LookupRightVector_o1 + rtb_Sum1_e *
-    rtB.LookupRightVector_o2;
+  rtB.Sum1 = rtb_Product_m_idx_0 * rtB.LookupRightVector_o1 +
+    rtb_Product_m_idx_1 * rtB.LookupRightVector_o2;
 
-  /* S-Function (get_rvec1): '<S44>/Look up Right Vector1' */
+  /* SampleTimeMath: '<S40>/TSamp' incorporates:
+   *  Gain: '<S38>/Gain1'
+   *  SampleTimeMath: '<S39>/TSamp'
+   *  Sum: '<S26>/Sum'
+   *
+   * About '<S40>/TSamp':
+   *  y = u * K where K = 1 / ( w * Ts )
+   *
+   * About '<S39>/TSamp':
+   *  y = u * K where K = 1 / ( w * Ts )
+   */
+  rtb_TSamp_tmp = (real32_T)((real_T)HighLevelDesign_ELAPS_T * 0.01);
+  rtb_Gain_ie = (real32_T)(0.0331F * rtB.Sum1 / rtb_TSamp_tmp);
+
+  /* Sum: '<S26>/Sum1' incorporates:
+   *  Gain: '<S38>/Gain'
+   *  Sum: '<S26>/Sum'
+   *  Sum: '<S38>/Sum'
+   *  Sum: '<S40>/Diff'
+   *  UnitDelay: '<S40>/UD'
+   *
+   * Block description for '<S40>/Diff':
+   *
+   *  Add in CPU
+   *
+   * Block description for '<S40>/UD':
+   *
+   *  Store in Global RAM
+   */
+  rtb_Sum1_j = (0.2367F * rtB.Sum1 + (rtb_Gain_ie - rtDW.UD_DSTATE)) - rtB.Gain;
+
+  /* SampleTimeMath: '<S39>/TSamp' incorporates:
+   *  Gain: '<S37>/Gain1'
+   *
+   * About '<S39>/TSamp':
+   *  y = u * K where K = 1 / ( w * Ts )
+   */
+  rtb_Sum1_k = (real32_T)(137.43F * rtb_Sum1_j / rtb_TSamp_tmp);
+
+  /* S-Function (gpio_s32k_input): '<S27>/Digital_Input1' */
+
+  /* GPIPORTE15 signal update */
+  rtB.Digital_Input1_b = (PINS_DRV_ReadPins(PTE) >> 15) & 0x01;
+
+  /* Product: '<S26>/Product' incorporates:
+   *  Gain: '<S37>/Gain'
+   *  Sum: '<S37>/Sum'
+   *  Sum: '<S39>/Diff'
+   *  UnitDelay: '<S39>/UD'
+   *
+   * Block description for '<S39>/Diff':
+   *
+   *  Add in CPU
+   *
+   * Block description for '<S39>/UD':
+   *
+   *  Store in Global RAM
+   */
+  rtb_Conversion = (473.451508F * rtb_Sum1_j + (rtb_Sum1_k - rtDW.UD_DSTATE_f)) *
+    (real32_T)rtB.Digital_Input1_b;
+
+  /* S-Function (get_rvec1): '<S49>/Look up Right Vector1' */
   {
     extern struct road_seg_type rs[MAX_RS];
     real_T p, u_alt;
@@ -861,7 +921,7 @@ void Final_project_template_step1(void) /* Sample time: [0.01s, 0.0s] */
     }
   }
 
-  /* S-Function (get_path1): '<S44>/Look up P1' */
+  /* S-Function (get_path1): '<S49>/Look up P1' */
   {
     extern struct road_seg_type rs[MAX_RS];
     real_T p, u_alt;
@@ -910,7 +970,7 @@ void Final_project_template_step1(void) /* Sample time: [0.01s, 0.0s] */
     }
   }
 
-  /* S-Function (get_rvec1): '<S51>/Look up Right Vector1' */
+  /* S-Function (get_rvec1): '<S56>/Look up Right Vector1' */
   {
     extern struct road_seg_type rs[MAX_RS];
     real_T p, u_alt;
@@ -971,7 +1031,7 @@ void Final_project_template_step1(void) /* Sample time: [0.01s, 0.0s] */
     }
   }
 
-  /* S-Function (get_path1): '<S51>/Look up P1' */
+  /* S-Function (get_path1): '<S56>/Look up P1' */
   {
     extern struct road_seg_type rs[MAX_RS];
     real_T p, u_alt;
@@ -1020,7 +1080,7 @@ void Final_project_template_step1(void) /* Sample time: [0.01s, 0.0s] */
     }
   }
 
-  /* S-Function (get_rvec1): '<S52>/Look up Right Vector1' */
+  /* S-Function (get_rvec1): '<S57>/Look up Right Vector1' */
   {
     extern struct road_seg_type rs[MAX_RS];
     real_T p, u_alt;
@@ -1081,7 +1141,7 @@ void Final_project_template_step1(void) /* Sample time: [0.01s, 0.0s] */
     }
   }
 
-  /* S-Function (get_path1): '<S52>/Look up P1' */
+  /* S-Function (get_path1): '<S57>/Look up P1' */
   {
     extern struct road_seg_type rs[MAX_RS];
     real_T p, u_alt;
@@ -1130,7 +1190,7 @@ void Final_project_template_step1(void) /* Sample time: [0.01s, 0.0s] */
     }
   }
 
-  /* S-Function (get_rvec1): '<S53>/Look up Right Vector1' */
+  /* S-Function (get_rvec1): '<S58>/Look up Right Vector1' */
   {
     extern struct road_seg_type rs[MAX_RS];
     real_T p, u_alt;
@@ -1191,7 +1251,7 @@ void Final_project_template_step1(void) /* Sample time: [0.01s, 0.0s] */
     }
   }
 
-  /* S-Function (get_path1): '<S53>/Look up P1' */
+  /* S-Function (get_path1): '<S58>/Look up P1' */
   {
     extern struct road_seg_type rs[MAX_RS];
     real_T p, u_alt;
@@ -1240,7 +1300,7 @@ void Final_project_template_step1(void) /* Sample time: [0.01s, 0.0s] */
     }
   }
 
-  /* S-Function (get_rvec1): '<S54>/Look up Right Vector1' */
+  /* S-Function (get_rvec1): '<S59>/Look up Right Vector1' */
   {
     extern struct road_seg_type rs[MAX_RS];
     real_T p, u_alt;
@@ -1301,7 +1361,7 @@ void Final_project_template_step1(void) /* Sample time: [0.01s, 0.0s] */
     }
   }
 
-  /* S-Function (get_path1): '<S54>/Look up P1' */
+  /* S-Function (get_path1): '<S59>/Look up P1' */
   {
     extern struct road_seg_type rs[MAX_RS];
     real_T p, u_alt;
@@ -1350,7 +1410,7 @@ void Final_project_template_step1(void) /* Sample time: [0.01s, 0.0s] */
     }
   }
 
-  /* S-Function (get_rvec1): '<S55>/Look up Right Vector1' */
+  /* S-Function (get_rvec1): '<S60>/Look up Right Vector1' */
   {
     extern struct road_seg_type rs[MAX_RS];
     real_T p, u_alt;
@@ -1411,7 +1471,7 @@ void Final_project_template_step1(void) /* Sample time: [0.01s, 0.0s] */
     }
   }
 
-  /* S-Function (get_path1): '<S55>/Look up P1' */
+  /* S-Function (get_path1): '<S60>/Look up P1' */
   {
     extern struct road_seg_type rs[MAX_RS];
     real_T p, u_alt;
@@ -1460,7 +1520,7 @@ void Final_project_template_step1(void) /* Sample time: [0.01s, 0.0s] */
     }
   }
 
-  /* S-Function (get_rvec1): '<S56>/Look up Right Vector1' */
+  /* S-Function (get_rvec1): '<S61>/Look up Right Vector1' */
   {
     extern struct road_seg_type rs[MAX_RS];
     real_T p, u_alt;
@@ -1521,7 +1581,7 @@ void Final_project_template_step1(void) /* Sample time: [0.01s, 0.0s] */
     }
   }
 
-  /* S-Function (get_path1): '<S56>/Look up P1' */
+  /* S-Function (get_path1): '<S61>/Look up P1' */
   {
     extern struct road_seg_type rs[MAX_RS];
     real_T p, u_alt;
@@ -1570,7 +1630,7 @@ void Final_project_template_step1(void) /* Sample time: [0.01s, 0.0s] */
     }
   }
 
-  /* S-Function (get_rvec1): '<S65>/Look up Right Vector' */
+  /* S-Function (get_rvec1): '<S70>/Look up Right Vector' */
   {
     extern struct road_seg_type rs[MAX_RS];
     real_T p, u_alt;
@@ -1631,31 +1691,31 @@ void Final_project_template_step1(void) /* Sample time: [0.01s, 0.0s] */
     }
   }
 
-  /* Sum: '<S64>/Sum1' */
-  rtb_Conversion = rtB.DiscreteTimeIntegrator2 + rtB.Gain;
+  /* Sum: '<S69>/Sum1' */
+  rtb_Sum1_j = rtB.DiscreteTimeIntegrator2 + rtB.Gain;
 
-  /* Product: '<S64>/Product1' incorporates:
-   *  Gain: '<S65>/Gain'
-   *  Product: '<S64>/Product'
-   *  Product: '<S64>/Product2'
-   *  Sum: '<S64>/Sum'
-   *  Trigonometry: '<S64>/Trigonometric Function'
-   *  Trigonometry: '<S64>/Trigonometric Function1'
+  /* Product: '<S69>/Product1' incorporates:
+   *  Gain: '<S70>/Gain'
+   *  Product: '<S69>/Product'
+   *  Product: '<S69>/Product2'
+   *  Sum: '<S69>/Sum'
+   *  Trigonometry: '<S69>/Trigonometric Function'
+   *  Trigonometry: '<S69>/Trigonometric Function1'
    */
-  rtB.Product1 = (-rtB.LookupRightVector_o2_f * cosf(rtb_Conversion) + sinf
-                  (rtb_Conversion) * rtB.LookupRightVector_o1_j) *
+  rtB.Product1 = (-rtB.LookupRightVector_o2_f * cosf(rtb_Sum1_j) + sinf
+                  (rtb_Sum1_j) * rtB.LookupRightVector_o1_j) *
     rtB.DiscreteTimeIntegrator;
 
-  /* S-Function (any2byte): '<S42>/Byte Pack1' */
+  /* S-Function (any2byte): '<S47>/Byte Pack1' */
 
-  /* Pack: <S42>/Byte Pack1 */
+  /* Pack: <S47>/Byte Pack1 */
   (void) memcpy(&rtB.BytePack1[0], &rtB.DiscreteTimeIntegrator2,
                 4);
   (void) memcpy(&rtB.BytePack1[4], &rtB.Product1,
                 4);
 
-  /* S-Function (fcan_s32k_send): '<S42>/psi,us' incorporates:
-   *  Constant: '<S42>/Constant'
+  /* S-Function (fcan_s32k_send): '<S47>/psi,us' incorporates:
+   *  Constant: '<S47>/Constant'
    */
   {
     flexcan_data_info_t canCom0_txBuff1 = {
@@ -1671,16 +1731,16 @@ void Final_project_template_step1(void) /* Sample time: [0.01s, 0.0s] */
     FLEXCAN_DRV_Send(0, 1, &canCom0_txBuff1, 0x56, &rtB.BytePack1[0]);
   }
 
-  /* S-Function (any2byte): '<S42>/Byte Pack' */
+  /* S-Function (any2byte): '<S47>/Byte Pack' */
 
-  /* Pack: <S42>/Byte Pack */
+  /* Pack: <S47>/Byte Pack */
   (void) memcpy(&rtB.BytePack[0], &rtB.UnitDelay,
                 4);
   (void) memcpy(&rtB.BytePack[4], &rtB.Sum1,
                 4);
 
-  /* S-Function (fcan_s32k_send): '<S42>/s,n' incorporates:
-   *  Constant: '<S42>/Constant1'
+  /* S-Function (fcan_s32k_send): '<S47>/s,n' incorporates:
+   *  Constant: '<S47>/Constant1'
    */
   {
     flexcan_data_info_t canCom0_txBuff0 = {
@@ -1696,33 +1756,33 @@ void Final_project_template_step1(void) /* Sample time: [0.01s, 0.0s] */
     FLEXCAN_DRV_Send(0, 0, &canCom0_txBuff0, 0x55, &rtB.BytePack[0]);
   }
 
-  /* Sum: '<S57>/Sum' incorporates:
-   *  Constant: '<S57>/Constant'
-   *  Constant: '<S59>/Constant'
-   *  Gain: '<S57>/Gain'
-   *  Product: '<S59>/Product'
-   *  Sum: '<S27>/Sum1'
+  /* Sum: '<S62>/Sum' incorporates:
+   *  Constant: '<S62>/Constant'
+   *  Constant: '<S64>/Constant'
+   *  Gain: '<S62>/Gain'
+   *  Product: '<S64>/Product'
+   *  Sum: '<S28>/Sum1'
    */
-  rtB.Saturation = (0.0F - rtB.DiscreteTimeIntegrator * rtB.Gain * -100.0F) *
-    0.0003162F + 0.5F;
+  rtB.Saturation = ((0.0F - rtB.DiscreteTimeIntegrator * rtB.Gain * -100.0F) -
+                    rtb_Conversion) * 0.0003162F + 0.5F;
 
-  /* Saturate: '<S57>/Saturation' */
+  /* Saturate: '<S62>/Saturation' */
   if (rtB.Saturation > 0.76F) {
-    /* Sum: '<S57>/Sum' incorporates:
-     *  Saturate: '<S57>/Saturation'
+    /* Sum: '<S62>/Sum' incorporates:
+     *  Saturate: '<S62>/Saturation'
      */
     rtB.Saturation = 0.76F;
   } else if (rtB.Saturation < 0.24F) {
-    /* Sum: '<S57>/Sum' incorporates:
-     *  Saturate: '<S57>/Saturation'
+    /* Sum: '<S62>/Sum' incorporates:
+     *  Saturate: '<S62>/Saturation'
      */
     rtB.Saturation = 0.24F;
   }
 
-  /* End of Saturate: '<S57>/Saturation' */
+  /* End of Saturate: '<S62>/Saturation' */
 
-  /* S-Function (ftm_s32k_pwm_config): '<S43>/FTM_PWM_Config' incorporates:
-   *  Constant: '<S43>/Constant'
+  /* S-Function (ftm_s32k_pwm_config): '<S48>/FTM_PWM_Config' incorporates:
+   *  Constant: '<S48>/Constant'
    */
   {
     uint16_t dutyA = FTM_MAX_DUTY_CYCLE * rtB.Saturation;
@@ -1730,7 +1790,7 @@ void Final_project_template_step1(void) /* Sample time: [0.01s, 0.0s] */
       0, true);
   }
 
-  /* S-Function (get_rvec1): '<S68>/Look up Right Vector' */
+  /* S-Function (get_rvec1): '<S73>/Look up Right Vector' */
   {
     extern struct road_seg_type rs[MAX_RS];
     real_T p, u_alt;
@@ -1791,24 +1851,24 @@ void Final_project_template_step1(void) /* Sample time: [0.01s, 0.0s] */
     }
   }
 
-  /* DataTypeConversion: '<S66>/Data  Type  Conversion' incorporates:
-   *  Gain: '<S68>/Gain'
-   *  Product: '<S70>/Product'
-   *  Sum: '<S70>/Sum1'
+  /* DataTypeConversion: '<S71>/Data  Type  Conversion' incorporates:
+   *  Gain: '<S73>/Gain'
+   *  Product: '<S75>/Product'
+   *  Sum: '<S75>/Sum1'
    */
-  rtb_DataTypeConversion = rtb_Gain_ie * -rtB.LookupRightVector_o2_fo +
-    rtb_Sum1_e * rtB.LookupRightVector_o1_i;
+  rtb_DataTypeConversion = rtb_Product_m_idx_0 * -rtB.LookupRightVector_o2_fo +
+    rtb_Product_m_idx_1 * rtB.LookupRightVector_o1_i;
 
-  /* DiscreteStateSpace: '<S66>/Controller' */
+  /* DiscreteStateSpace: '<S71>/Controller' */
   {
     rtb_dsdt = 0.38289225536816662*rtDW.Controller_DSTATE;
     rtb_dsdt += 150.12503472222349*rtb_DataTypeConversion;
   }
 
-  /* Sum: '<S69>/Sum' incorporates:
-   *  DataTypeConversion: '<S67>/Conversion'
-   *  Gain: '<S69>/Gain'
-   *  UnitDelay: '<S69>/Unit Delay'
+  /* Sum: '<S74>/Sum' incorporates:
+   *  DataTypeConversion: '<S72>/Conversion'
+   *  Gain: '<S74>/Gain'
+   *  UnitDelay: '<S74>/Unit Delay'
    */
   rtDW.UnitDelay_DSTATE_i = 0.01F * (real32_T)rtb_dsdt + rtB.UnitDelay;
 
@@ -1818,10 +1878,26 @@ void Final_project_template_step1(void) /* Sample time: [0.01s, 0.0s] */
   rtDW.UnitDelay_DSTATE[2] = rtB.DiscreteTimeIntegrator2;
   rtDW.UnitDelay_DSTATE[3] = rtB.Product1;
 
-  /* Update for UnitDelay: '<S39>/Unit Delay' */
+  /* Update for UnitDelay: '<S44>/Unit Delay' */
   rtDW.UnitDelay_DSTATE_c = rtB.Quadrature_Decoder_o1;
 
-  /* Update for DiscreteStateSpace: '<S66>/Controller' */
+  /* Update for UnitDelay: '<S40>/UD'
+   *
+   * Block description for '<S40>/UD':
+   *
+   *  Store in Global RAM
+   */
+  rtDW.UD_DSTATE = rtb_Gain_ie;
+
+  /* Update for UnitDelay: '<S39>/UD'
+   *
+   * Block description for '<S39>/UD':
+   *
+   *  Store in Global RAM
+   */
+  rtDW.UD_DSTATE_f = rtb_Sum1_k;
+
+  /* Update for DiscreteStateSpace: '<S71>/Controller' */
   {
     real_T xnew[1];
     xnew[0] = 1.0*rtDW.Controller_DSTATE;
@@ -1833,21 +1909,21 @@ void Final_project_template_step1(void) /* Sample time: [0.01s, 0.0s] */
   /* End of Outputs for S-Function (fcgen): '<Root>/Function-Call Top' */
 
   /* RateTransition: '<Root>/Rate Transition' incorporates:
-   *  Product: '<S44>/Product'
-   *  Product: '<S51>/Product'
-   *  Product: '<S52>/Product'
-   *  Product: '<S53>/Product'
-   *  Product: '<S54>/Product'
-   *  Product: '<S55>/Product'
+   *  Product: '<S49>/Product'
    *  Product: '<S56>/Product'
+   *  Product: '<S57>/Product'
+   *  Product: '<S58>/Product'
+   *  Product: '<S59>/Product'
+   *  Product: '<S60>/Product'
+   *  Product: '<S61>/Product'
    *  SignalConversion generated from: '<S2>/Serial'
-   *  Sum: '<S44>/Sum'
-   *  Sum: '<S51>/Sum'
-   *  Sum: '<S52>/Sum'
-   *  Sum: '<S53>/Sum'
-   *  Sum: '<S54>/Sum'
-   *  Sum: '<S55>/Sum'
+   *  Sum: '<S49>/Sum'
    *  Sum: '<S56>/Sum'
+   *  Sum: '<S57>/Sum'
+   *  Sum: '<S58>/Sum'
+   *  Sum: '<S59>/Sum'
+   *  Sum: '<S60>/Sum'
+   *  Sum: '<S61>/Sum'
    */
   if (rtM->Timing.RateInteraction.TID1_2) {
     /* S-Function (fcgen): '<Root>/Function-Call Top' incorporates:
@@ -1914,21 +1990,21 @@ void Final_project_template_step2(void) /* Sample time: [0.05s, 0.0s] */
   /* S-Function (fcgen): '<S4>/Function-Call Generator1' incorporates:
    *  SubSystem: '<S4>/Serial'
    */
-  /* S-Function (slrealtimebytepacking): '<S72>/Byte Packing ' */
+  /* S-Function (slrealtimebytepacking): '<S77>/Byte Packing ' */
 
-  /* Byte Packing: <S72>/Byte Packing  */
+  /* Byte Packing: <S77>/Byte Packing  */
   (void)memcpy((uint8_T*)&rtB.BytePacking[0] + 0, (uint8_T*)&rtB.RateTransition
                [0], 88);
 
-  /* Logic: '<S72>/NOT' incorporates:
-   *  Delay: '<S72>/Delay'
+  /* Logic: '<S77>/NOT' incorporates:
+   *  Delay: '<S77>/Delay'
    */
   rtDW.Delay_DSTATE_j = !rtDW.Delay_DSTATE_j;
 
   /* End of Outputs for S-Function (fcgen): '<S4>/Function-Call Generator1' */
 
   /* RateTransition: '<S4>/RT' incorporates:
-   *  Delay: '<S72>/Delay'
+   *  Delay: '<S77>/Delay'
    */
   rtDW.RT_Buffer0 = rtDW.Delay_DSTATE_j;
 
@@ -1936,9 +2012,9 @@ void Final_project_template_step2(void) /* Sample time: [0.05s, 0.0s] */
    *  SubSystem: '<S4>/Serial'
    */
   /* RateTransition: '<S4>/RT1' incorporates:
-   *  Constant: '<S72>/Constant2'
-   *  Constant: '<S72>/Constant3'
-   *  SignalConversion generated from: '<S72>/data_out'
+   *  Constant: '<S77>/Constant2'
+   *  Constant: '<S77>/Constant3'
+   *  SignalConversion generated from: '<S77>/data_out'
    */
   rtDW.RT1_Buffer0[0] = 115U;
   memcpy(&rtDW.RT1_Buffer0[1], &rtB.BytePacking[0], 88U * sizeof(uint8_T));
@@ -2382,7 +2458,7 @@ void Final_project_template_initialize(void)
   /* SystemInitialize for S-Function (fcgen): '<Root>/Function-Call Top' incorporates:
    *  SubSystem: '<Root>/High Level Design'
    */
-  /* Start for S-Function (gpio_s32k_input): '<S26>/Digital_Input' */
+  /* Start for S-Function (gpio_s32k_input): '<S27>/Digital_Input' */
   {
     /* Enable clock for PORTE */
     PCC_SetClockMode(PCC, PCC_PORTE_CLOCK, true);
@@ -2481,7 +2557,7 @@ void Final_project_template_initialize(void)
     PINS_DRV_Init(1, &gpioPORTDPin10);
   }
 
-  /* Start for S-Function (gpio_s32k_input): '<S36>/Digital_Input' */
+  /* Start for S-Function (gpio_s32k_input): '<S41>/Digital_Input' */
   {
     /* Enable clock for PORTE */
     PCC_SetClockMode(PCC, PCC_PORTE_CLOCK, true);
@@ -2505,7 +2581,7 @@ void Final_project_template_initialize(void)
     PINS_DRV_Init(1, &gpioPORTEPin6);
   }
 
-  /* Start for S-Function (gpio_s32k_input): '<S36>/Digital_Input1' */
+  /* Start for S-Function (gpio_s32k_input): '<S41>/Digital_Input1' */
   {
     /* Enable clock for PORTE */
     PCC_SetClockMode(PCC, PCC_PORTE_CLOCK, true);
@@ -2529,7 +2605,7 @@ void Final_project_template_initialize(void)
     PINS_DRV_Init(1, &gpioPORTEPin7);
   }
 
-  /* Start for S-Function (gpio_s32k_input): '<S36>/Digital_Input2' */
+  /* Start for S-Function (gpio_s32k_input): '<S41>/Digital_Input2' */
   {
     /* Enable clock for PORTE */
     PCC_SetClockMode(PCC, PCC_PORTE_CLOCK, true);
@@ -2553,7 +2629,7 @@ void Final_project_template_initialize(void)
     PINS_DRV_Init(1, &gpioPORTEPin8);
   }
 
-  /* Start for S-Function (gpio_s32k_input): '<S36>/Digital_Input3' */
+  /* Start for S-Function (gpio_s32k_input): '<S41>/Digital_Input3' */
   {
     /* Enable clock for PORTE */
     PCC_SetClockMode(PCC, PCC_PORTE_CLOCK, true);
@@ -2577,7 +2653,7 @@ void Final_project_template_initialize(void)
     PINS_DRV_Init(1, &gpioPORTEPin9);
   }
 
-  /* Start for S-Function (gpio_s32k_input): '<S36>/Digital_Input4' */
+  /* Start for S-Function (gpio_s32k_input): '<S41>/Digital_Input4' */
   {
     /* Enable clock for PORTE */
     PCC_SetClockMode(PCC, PCC_PORTE_CLOCK, true);
@@ -2601,7 +2677,7 @@ void Final_project_template_initialize(void)
     PINS_DRV_Init(1, &gpioPORTEPin10);
   }
 
-  /* Start for S-Function (gpio_s32k_input): '<S36>/Digital_Input5' */
+  /* Start for S-Function (gpio_s32k_input): '<S41>/Digital_Input5' */
   {
     /* Enable clock for PORTE */
     PCC_SetClockMode(PCC, PCC_PORTE_CLOCK, true);
@@ -2625,7 +2701,7 @@ void Final_project_template_initialize(void)
     PINS_DRV_Init(1, &gpioPORTEPin11);
   }
 
-  /* Start for S-Function (gpio_s32k_input): '<S36>/Digital_Input6' */
+  /* Start for S-Function (gpio_s32k_input): '<S41>/Digital_Input6' */
   {
     /* Enable clock for PORTE */
     PCC_SetClockMode(PCC, PCC_PORTE_CLOCK, true);
@@ -2649,7 +2725,7 @@ void Final_project_template_initialize(void)
     PINS_DRV_Init(1, &gpioPORTEPin12);
   }
 
-  /* Start for S-Function (gpio_s32k_input): '<S36>/Digital_Input7' */
+  /* Start for S-Function (gpio_s32k_input): '<S41>/Digital_Input7' */
   {
     /* Enable clock for PORTE */
     PCC_SetClockMode(PCC, PCC_PORTE_CLOCK, true);
@@ -2673,7 +2749,7 @@ void Final_project_template_initialize(void)
     PINS_DRV_Init(1, &gpioPORTEPin13);
   }
 
-  /* Start for S-Function (ftm_s32k_quadrature_decoder): '<S38>/Quadrature_Decoder' */
+  /* Start for S-Function (ftm_s32k_quadrature_decoder): '<S43>/Quadrature_Decoder' */
   {
     ftm_user_config_t ftm2_qd_InitConfig = {
       {
@@ -2742,7 +2818,7 @@ void Final_project_template_initialize(void)
     FTM_DRV_QuadDecodeStart(2, &ftm2_qd_Params);
   }
 
-  /* Start for S-Function (gpio_s32k_input): '<S26>/Digital_Input1' */
+  /* Start for S-Function (gpio_s32k_input): '<S27>/Digital_Input1' */
   {
     /* Enable clock for PORTE */
     PCC_SetClockMode(PCC, PCC_PORTE_CLOCK, true);
@@ -2766,8 +2842,8 @@ void Final_project_template_initialize(void)
     PINS_DRV_Init(1, &gpioPORTEPin15);
   }
 
-  /* Start for S-Function (ftm_s32k_pwm_config): '<S43>/FTM_PWM_Config' incorporates:
-   *  Constant: '<S43>/Constant'
+  /* Start for S-Function (ftm_s32k_pwm_config): '<S48>/FTM_PWM_Config' incorporates:
+   *  Constant: '<S48>/Constant'
    */
 
   /* Enable clock for PORTB */
@@ -2792,20 +2868,20 @@ void Final_project_template_initialize(void)
    */
   rtDW.HighLevelDesign_RESET_ELAPS_T = true;
 
-  /* Enable for Atomic SubSystem: '<S28>/Vehicle Dynamics' */
-  /* Enable for DiscreteIntegrator: '<S60>/Discrete-Time Integrator' */
+  /* Enable for Atomic SubSystem: '<S29>/Vehicle Dynamics' */
+  /* Enable for DiscreteIntegrator: '<S65>/Discrete-Time Integrator' */
   rtDW.DiscreteTimeIntegrator_SYSTEM_E = 1U;
 
-  /* Enable for DiscreteIntegrator: '<S62>/Discrete-Time Integrator2' */
+  /* Enable for DiscreteIntegrator: '<S67>/Discrete-Time Integrator2' */
   rtDW.DiscreteTimeIntegrator2_SYSTEM_ = 1U;
 
-  /* Enable for DiscreteIntegrator: '<S62>/Discrete-Time Integrator' */
+  /* Enable for DiscreteIntegrator: '<S67>/Discrete-Time Integrator' */
   rtDW.DiscreteTimeIntegrator_SYSTEM_b = 1U;
 
-  /* Enable for DiscreteIntegrator: '<S62>/Discrete-Time Integrator1' */
+  /* Enable for DiscreteIntegrator: '<S67>/Discrete-Time Integrator1' */
   rtDW.DiscreteTimeIntegrator1_SYSTEM_ = 1U;
 
-  /* End of Enable for SubSystem: '<S28>/Vehicle Dynamics' */
+  /* End of Enable for SubSystem: '<S29>/Vehicle Dynamics' */
   /* End of Enable for S-Function (fcgen): '<Root>/Function-Call Top' */
 }
 

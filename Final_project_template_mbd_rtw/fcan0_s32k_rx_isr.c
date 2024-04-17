@@ -7,10 +7,10 @@
  *
  * Code generated for Simulink model 'Final_project_template'.
  *
- * Model version                   : 10.22
+ * Model version                   : 10.27
  * Simulink Coder version          : 9.8 (R2022b) 13-May-2022
  * MBDT for S32K1xx Series Version : 4.3.0 (R2016a-R2022a) 13-Sep-2022
- * C/C++ source code generated on  : Thu Apr 11 13:55:15 2024
+ * C/C++ source code generated on  : Wed Apr 17 17:22:11 2024
  *
  * Target selection: mbd_s32k.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -93,7 +93,7 @@ void fcan0_s32k_rx_isr(uint8_t instance, flexcan_event_type_t eventType,
      *  Constant: '<S1>/Array of 6 base IDs'
      *  Sum: '<S9>/Subtract'
      */
-    if ((real_T)rtB.FCAN_Isr_o3 - 30.0 == 5.0) {
+    if ((real_T)rtB.FCAN_Isr_o3 - 40.0 == 5.0) {
       /* Outputs for IfAction SubSystem: '<S9>/Switch Case Action Subsystem2' incorporates:
        *  ActionPort: '<S17>/Action Port'
        */
@@ -101,7 +101,7 @@ void fcan0_s32k_rx_isr(uint8_t instance, flexcan_event_type_t eventType,
         &rtB.ByteUnpacking_o2_i);
 
       /* End of Outputs for SubSystem: '<S9>/Switch Case Action Subsystem2' */
-    } else if ((real_T)rtB.FCAN_Isr_o3 - 30.0 == 6.0) {
+    } else if ((real_T)rtB.FCAN_Isr_o3 - 40.0 == 6.0) {
       /* Outputs for IfAction SubSystem: '<S9>/Switch Case Action Subsystem3' incorporates:
        *  ActionPort: '<S18>/Action Port'
        */
@@ -117,7 +117,7 @@ void fcan0_s32k_rx_isr(uint8_t instance, flexcan_event_type_t eventType,
      *  Constant: '<S1>/Array of 6 base IDs'
      *  Sum: '<S10>/Subtract'
      */
-    if ((real_T)rtB.FCAN_Isr_o3 - 40.0 == 5.0) {
+    if ((real_T)rtB.FCAN_Isr_o3 - 50.0 == 5.0) {
       /* Outputs for IfAction SubSystem: '<S10>/Switch Case Action Subsystem2' incorporates:
        *  ActionPort: '<S19>/Action Port'
        */
@@ -125,7 +125,7 @@ void fcan0_s32k_rx_isr(uint8_t instance, flexcan_event_type_t eventType,
         &rtB.ByteUnpacking_o2_p);
 
       /* End of Outputs for SubSystem: '<S10>/Switch Case Action Subsystem2' */
-    } else if ((real_T)rtB.FCAN_Isr_o3 - 40.0 == 6.0) {
+    } else if ((real_T)rtB.FCAN_Isr_o3 - 50.0 == 6.0) {
       /* Outputs for IfAction SubSystem: '<S10>/Switch Case Action Subsystem3' incorporates:
        *  ActionPort: '<S20>/Action Port'
        */
@@ -141,7 +141,7 @@ void fcan0_s32k_rx_isr(uint8_t instance, flexcan_event_type_t eventType,
      *  Constant: '<S1>/Array of 6 base IDs'
      *  Sum: '<S11>/Subtract'
      */
-    if ((real_T)rtB.FCAN_Isr_o3 - 50.0 == 5.0) {
+    if ((real_T)rtB.FCAN_Isr_o3 - 60.0 == 5.0) {
       /* Outputs for IfAction SubSystem: '<S11>/Switch Case Action Subsystem2' incorporates:
        *  ActionPort: '<S21>/Action Port'
        */
@@ -149,7 +149,7 @@ void fcan0_s32k_rx_isr(uint8_t instance, flexcan_event_type_t eventType,
         &rtB.ByteUnpacking_o2_j);
 
       /* End of Outputs for SubSystem: '<S11>/Switch Case Action Subsystem2' */
-    } else if ((real_T)rtB.FCAN_Isr_o3 - 50.0 == 6.0) {
+    } else if ((real_T)rtB.FCAN_Isr_o3 - 60.0 == 6.0) {
       /* Outputs for IfAction SubSystem: '<S11>/Switch Case Action Subsystem3' incorporates:
        *  ActionPort: '<S22>/Action Port'
        */

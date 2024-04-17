@@ -7,10 +7,10 @@
  *
  * Code generated for Simulink model 'Final_project_template'.
  *
- * Model version                   : 10.22
+ * Model version                   : 10.27
  * Simulink Coder version          : 9.8 (R2022b) 13-May-2022
  * MBDT for S32K1xx Series Version : 4.3.0 (R2016a-R2022a) 13-Sep-2022
- * C/C++ source code generated on  : Thu Apr 11 13:55:15 2024
+ * C/C++ source code generated on  : Wed Apr 17 17:22:11 2024
  *
  * Target selection: mbd_s32k.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -82,59 +82,59 @@ typedef struct {
 /* Block signals (default storage) */
 typedef struct {
   uint32_T FCAN_Isr_o3;                /* '<S1>/FCAN_Isr' */
-  uint32_T ADC_Start;                  /* '<S37>/ADC_Start' */
+  uint32_T ADC_Start;                  /* '<S42>/ADC_Start' */
   real32_T RateTransition[22];         /* '<Root>/Rate Transition' */
   real32_T snpsiusCars16[24];          /* '<S2>/s,n,psi,us (Cars 1-6)' */
   real32_T TmpSignalConversionAtSFunctionB[28];
-  real32_T SFunctionBuilder_o1;        /* '<S29>/S-Function Builder' */
-  real32_T SFunctionBuilder_o2;        /* '<S29>/S-Function Builder' */
+  real32_T SFunctionBuilder_o1;        /* '<S30>/S-Function Builder' */
+  real32_T SFunctionBuilder_o2;        /* '<S30>/S-Function Builder' */
   real32_T Merge;                      /* '<S25>/Merge' */
-  real32_T Gain;                       /* '<S26>/Gain' */
-  real32_T UnitDelay;                  /* '<S69>/Unit Delay' */
-  real32_T LookupP_o1;                 /* '<S66>/Look up P' */
-  real32_T LookupP_o2;                 /* '<S66>/Look up P' */
-  real32_T LookupRightVector_o1;       /* '<S66>/Look up Right Vector' */
-  real32_T LookupRightVector_o2;       /* '<S66>/Look up Right Vector' */
-  real32_T Sum1;                       /* '<S71>/Sum1' */
-  real32_T LookupRightVector1_o1;      /* '<S44>/Look up Right Vector1' */
-  real32_T LookupRightVector1_o2;      /* '<S44>/Look up Right Vector1' */
-  real32_T LookupP1_o1;                /* '<S44>/Look up P1' */
-  real32_T LookupP1_o2;                /* '<S44>/Look up P1' */
-  real32_T LookupRightVector1_o1_j;    /* '<S51>/Look up Right Vector1' */
-  real32_T LookupRightVector1_o2_m;    /* '<S51>/Look up Right Vector1' */
-  real32_T LookupP1_o1_j;              /* '<S51>/Look up P1' */
-  real32_T LookupP1_o2_m;              /* '<S51>/Look up P1' */
-  real32_T LookupRightVector1_o1_i;    /* '<S52>/Look up Right Vector1' */
-  real32_T LookupRightVector1_o2_d;    /* '<S52>/Look up Right Vector1' */
-  real32_T LookupP1_o1_f;              /* '<S52>/Look up P1' */
-  real32_T LookupP1_o2_p;              /* '<S52>/Look up P1' */
-  real32_T LookupRightVector1_o1_a;    /* '<S53>/Look up Right Vector1' */
-  real32_T LookupRightVector1_o2_j;    /* '<S53>/Look up Right Vector1' */
-  real32_T LookupP1_o1_jz;             /* '<S53>/Look up P1' */
-  real32_T LookupP1_o2_pi;             /* '<S53>/Look up P1' */
-  real32_T LookupRightVector1_o1_c;    /* '<S54>/Look up Right Vector1' */
-  real32_T LookupRightVector1_o2_e;    /* '<S54>/Look up Right Vector1' */
-  real32_T LookupP1_o1_a;              /* '<S54>/Look up P1' */
-  real32_T LookupP1_o2_l;              /* '<S54>/Look up P1' */
-  real32_T LookupRightVector1_o1_iv;   /* '<S55>/Look up Right Vector1' */
-  real32_T LookupRightVector1_o2_f;    /* '<S55>/Look up Right Vector1' */
-  real32_T LookupP1_o1_c;              /* '<S55>/Look up P1' */
-  real32_T LookupP1_o2_e;              /* '<S55>/Look up P1' */
-  real32_T LookupRightVector1_o1_je;   /* '<S56>/Look up Right Vector1' */
-  real32_T LookupRightVector1_o2_b;    /* '<S56>/Look up Right Vector1' */
-  real32_T LookupP1_o1_g;              /* '<S56>/Look up P1' */
-  real32_T LookupP1_o2_n;              /* '<S56>/Look up P1' */
-  real32_T LookupRightVector_o1_j;     /* '<S65>/Look up Right Vector' */
-  real32_T LookupRightVector_o2_f;     /* '<S65>/Look up Right Vector' */
-  real32_T Product1;                   /* '<S64>/Product1' */
-  real32_T Saturation;                 /* '<S57>/Saturation' */
-  real32_T LookupRightVector_o1_i;     /* '<S68>/Look up Right Vector' */
-  real32_T LookupRightVector_o2_fo;    /* '<S68>/Look up Right Vector' */
-  real32_T DiscreteTimeIntegrator;     /* '<S60>/Discrete-Time Integrator' */
-  real32_T DiscreteTimeIntegrator2;    /* '<S62>/Discrete-Time Integrator2' */
-  real32_T SFunctionBuilder_o1_b;      /* '<S61>/S-Function Builder' */
-  real32_T SFunctionBuilder_o2_i;      /* '<S61>/S-Function Builder' */
-  real32_T SFunctionBuilder_o3;        /* '<S61>/S-Function Builder' */
+  real32_T Gain;                       /* '<S27>/Gain' */
+  real32_T UnitDelay;                  /* '<S74>/Unit Delay' */
+  real32_T LookupP_o1;                 /* '<S71>/Look up P' */
+  real32_T LookupP_o2;                 /* '<S71>/Look up P' */
+  real32_T LookupRightVector_o1;       /* '<S71>/Look up Right Vector' */
+  real32_T LookupRightVector_o2;       /* '<S71>/Look up Right Vector' */
+  real32_T Sum1;                       /* '<S76>/Sum1' */
+  real32_T LookupRightVector1_o1;      /* '<S49>/Look up Right Vector1' */
+  real32_T LookupRightVector1_o2;      /* '<S49>/Look up Right Vector1' */
+  real32_T LookupP1_o1;                /* '<S49>/Look up P1' */
+  real32_T LookupP1_o2;                /* '<S49>/Look up P1' */
+  real32_T LookupRightVector1_o1_j;    /* '<S56>/Look up Right Vector1' */
+  real32_T LookupRightVector1_o2_m;    /* '<S56>/Look up Right Vector1' */
+  real32_T LookupP1_o1_j;              /* '<S56>/Look up P1' */
+  real32_T LookupP1_o2_m;              /* '<S56>/Look up P1' */
+  real32_T LookupRightVector1_o1_i;    /* '<S57>/Look up Right Vector1' */
+  real32_T LookupRightVector1_o2_d;    /* '<S57>/Look up Right Vector1' */
+  real32_T LookupP1_o1_f;              /* '<S57>/Look up P1' */
+  real32_T LookupP1_o2_p;              /* '<S57>/Look up P1' */
+  real32_T LookupRightVector1_o1_a;    /* '<S58>/Look up Right Vector1' */
+  real32_T LookupRightVector1_o2_j;    /* '<S58>/Look up Right Vector1' */
+  real32_T LookupP1_o1_jz;             /* '<S58>/Look up P1' */
+  real32_T LookupP1_o2_pi;             /* '<S58>/Look up P1' */
+  real32_T LookupRightVector1_o1_c;    /* '<S59>/Look up Right Vector1' */
+  real32_T LookupRightVector1_o2_e;    /* '<S59>/Look up Right Vector1' */
+  real32_T LookupP1_o1_a;              /* '<S59>/Look up P1' */
+  real32_T LookupP1_o2_l;              /* '<S59>/Look up P1' */
+  real32_T LookupRightVector1_o1_iv;   /* '<S60>/Look up Right Vector1' */
+  real32_T LookupRightVector1_o2_f;    /* '<S60>/Look up Right Vector1' */
+  real32_T LookupP1_o1_c;              /* '<S60>/Look up P1' */
+  real32_T LookupP1_o2_e;              /* '<S60>/Look up P1' */
+  real32_T LookupRightVector1_o1_je;   /* '<S61>/Look up Right Vector1' */
+  real32_T LookupRightVector1_o2_b;    /* '<S61>/Look up Right Vector1' */
+  real32_T LookupP1_o1_g;              /* '<S61>/Look up P1' */
+  real32_T LookupP1_o2_n;              /* '<S61>/Look up P1' */
+  real32_T LookupRightVector_o1_j;     /* '<S70>/Look up Right Vector' */
+  real32_T LookupRightVector_o2_f;     /* '<S70>/Look up Right Vector' */
+  real32_T Product1;                   /* '<S69>/Product1' */
+  real32_T Saturation;                 /* '<S62>/Saturation' */
+  real32_T LookupRightVector_o1_i;     /* '<S73>/Look up Right Vector' */
+  real32_T LookupRightVector_o2_fo;    /* '<S73>/Look up Right Vector' */
+  real32_T DiscreteTimeIntegrator;     /* '<S65>/Discrete-Time Integrator' */
+  real32_T DiscreteTimeIntegrator2;    /* '<S67>/Discrete-Time Integrator2' */
+  real32_T SFunctionBuilder_o1_b;      /* '<S66>/S-Function Builder' */
+  real32_T SFunctionBuilder_o2_i;      /* '<S66>/S-Function Builder' */
+  real32_T SFunctionBuilder_o3;        /* '<S66>/S-Function Builder' */
   real32_T ByteUnpacking_o1;           /* '<S24>/Byte Unpacking ' */
   real32_T ByteUnpacking_o2;           /* '<S24>/Byte Unpacking ' */
   real32_T ByteUnpacking_o1_f;         /* '<S23>/Byte Unpacking ' */
@@ -160,62 +160,64 @@ typedef struct {
   real32_T ByteUnpacking_o1_m;         /* '<S13>/Byte Unpacking ' */
   real32_T ByteUnpacking_o2_k;         /* '<S13>/Byte Unpacking ' */
   uint16_T FCAN_Isr_o6;                /* '<S1>/FCAN_Isr' */
-  uint16_T Quadrature_Decoder_o1;      /* '<S38>/Quadrature_Decoder' */
+  uint16_T Quadrature_Decoder_o1;      /* '<S43>/Quadrature_Decoder' */
   uint8_T RT1[90];                     /* '<S4>/RT1' */
   uint8_T FCAN_Isr_o2;                 /* '<S1>/FCAN_Isr' */
   uint8_T FCAN_Isr_o4[8];              /* '<S1>/FCAN_Isr' */
   uint8_T FCAN_Isr_o5;                 /* '<S1>/FCAN_Isr' */
-  uint8_T IndexVector;                 /* '<S73>/Index Vector' */
-  uint8_T BytePacking[88];             /* '<S72>/Byte Packing ' */
-  uint8_T BytePack1[8];                /* '<S42>/Byte Pack1' */
-  uint8_T BytePack[8];                 /* '<S42>/Byte Pack' */
+  uint8_T IndexVector;                 /* '<S78>/Index Vector' */
+  uint8_T BytePacking[88];             /* '<S77>/Byte Packing ' */
+  uint8_T BytePack1[8];                /* '<S47>/Byte Pack1' */
+  uint8_T BytePack[8];                 /* '<S47>/Byte Pack' */
   boolean_T RT_k;                      /* '<S4>/RT' */
-  boolean_T Digital_Input;             /* '<S26>/Digital_Input' */
-  boolean_T Digital_Input_g;           /* '<S36>/Digital_Input' */
-  boolean_T Digital_Input1;            /* '<S36>/Digital_Input1' */
-  boolean_T Digital_Input2;            /* '<S36>/Digital_Input2' */
-  boolean_T Digital_Input3;            /* '<S36>/Digital_Input3' */
-  boolean_T Digital_Input4;            /* '<S36>/Digital_Input4' */
-  boolean_T Digital_Input5;            /* '<S36>/Digital_Input5' */
-  boolean_T Digital_Input6;            /* '<S36>/Digital_Input6' */
-  boolean_T Digital_Input7;            /* '<S36>/Digital_Input7' */
-  boolean_T Quadrature_Decoder_o2;     /* '<S38>/Quadrature_Decoder' */
-  boolean_T Quadrature_Decoder_o3;     /* '<S38>/Quadrature_Decoder' */
-  boolean_T Quadrature_Decoder_o4;     /* '<S38>/Quadrature_Decoder' */
-  boolean_T Digital_Input1_b;          /* '<S26>/Digital_Input1' */
-  boolean_T man;                       /* '<S29>/Chart' */
-  boolean_T vel;                       /* '<S29>/Chart' */
-  boolean_T pos;                       /* '<S29>/Chart' */
+  boolean_T Digital_Input;             /* '<S27>/Digital_Input' */
+  boolean_T Digital_Input_g;           /* '<S41>/Digital_Input' */
+  boolean_T Digital_Input1;            /* '<S41>/Digital_Input1' */
+  boolean_T Digital_Input2;            /* '<S41>/Digital_Input2' */
+  boolean_T Digital_Input3;            /* '<S41>/Digital_Input3' */
+  boolean_T Digital_Input4;            /* '<S41>/Digital_Input4' */
+  boolean_T Digital_Input5;            /* '<S41>/Digital_Input5' */
+  boolean_T Digital_Input6;            /* '<S41>/Digital_Input6' */
+  boolean_T Digital_Input7;            /* '<S41>/Digital_Input7' */
+  boolean_T Quadrature_Decoder_o2;     /* '<S43>/Quadrature_Decoder' */
+  boolean_T Quadrature_Decoder_o3;     /* '<S43>/Quadrature_Decoder' */
+  boolean_T Quadrature_Decoder_o4;     /* '<S43>/Quadrature_Decoder' */
+  boolean_T Digital_Input1_b;          /* '<S27>/Digital_Input1' */
+  boolean_T man;                       /* '<S30>/Chart' */
+  boolean_T vel;                       /* '<S30>/Chart' */
+  boolean_T pos;                       /* '<S30>/Chart' */
 } B;
 
 /* Block states (default storage) for system '<Root>' */
 typedef struct {
-  real_T Delay_DSTATE;                 /* '<S74>/Delay' */
-  real_T Controller_DSTATE;            /* '<S66>/Controller' */
+  real_T Delay_DSTATE;                 /* '<S79>/Delay' */
+  real_T Controller_DSTATE;            /* '<S71>/Controller' */
   real32_T UnitDelay_DSTATE[4];        /* '<S2>/Unit Delay' */
-  real32_T UnitDelay1_DSTATE;          /* '<S39>/Unit Delay1' */
-  real32_T UnitDelay_DSTATE_i;         /* '<S69>/Unit Delay' */
-  real32_T DiscreteTimeIntegrator_DSTATE;/* '<S60>/Discrete-Time Integrator' */
-  real32_T DiscreteTimeIntegrator2_DSTATE;/* '<S62>/Discrete-Time Integrator2' */
-  real32_T DiscreteTimeIntegrator_DSTATE_k;/* '<S62>/Discrete-Time Integrator' */
-  real32_T DiscreteTimeIntegrator1_DSTATE;/* '<S62>/Discrete-Time Integrator1' */
-  real32_T UnitDelay_DSTATE_o;         /* '<S35>/Unit Delay' */
+  real32_T UnitDelay1_DSTATE;          /* '<S44>/Unit Delay1' */
+  real32_T UnitDelay_DSTATE_i;         /* '<S74>/Unit Delay' */
+  real32_T UD_DSTATE;                  /* '<S40>/UD' */
+  real32_T UD_DSTATE_f;                /* '<S39>/UD' */
+  real32_T DiscreteTimeIntegrator_DSTATE;/* '<S65>/Discrete-Time Integrator' */
+  real32_T DiscreteTimeIntegrator2_DSTATE;/* '<S67>/Discrete-Time Integrator2' */
+  real32_T DiscreteTimeIntegrator_DSTATE_k;/* '<S67>/Discrete-Time Integrator' */
+  real32_T DiscreteTimeIntegrator1_DSTATE;/* '<S67>/Discrete-Time Integrator1' */
+  real32_T UnitDelay_DSTATE_o;         /* '<S36>/Unit Delay' */
   real32_T RateTransition_Buffer[22];  /* '<Root>/Rate Transition' */
-  real32_T DiscreteTimeIntegrator_PREV_U;/* '<S60>/Discrete-Time Integrator' */
-  real32_T DiscreteTimeIntegrator2_PREV_U;/* '<S62>/Discrete-Time Integrator2' */
-  real32_T DiscreteTimeIntegrator_PREV_U_d;/* '<S62>/Discrete-Time Integrator' */
-  real32_T DiscreteTimeIntegrator1_PREV_U;/* '<S62>/Discrete-Time Integrator1' */
+  real32_T DiscreteTimeIntegrator_PREV_U;/* '<S65>/Discrete-Time Integrator' */
+  real32_T DiscreteTimeIntegrator2_PREV_U;/* '<S67>/Discrete-Time Integrator2' */
+  real32_T DiscreteTimeIntegrator_PREV_U_d;/* '<S67>/Discrete-Time Integrator' */
+  real32_T DiscreteTimeIntegrator1_PREV_U;/* '<S67>/Discrete-Time Integrator1' */
   uint32_T HighLevelDesign_PREV_T;     /* '<Root>/High Level Design' */
-  int_T BytePacking_IWORK[2];          /* '<S72>/Byte Packing ' */
-  uint16_T UnitDelay_DSTATE_c;         /* '<S39>/Unit Delay' */
-  boolean_T Delay_DSTATE_j;            /* '<S72>/Delay' */
+  int_T BytePacking_IWORK[2];          /* '<S77>/Byte Packing ' */
+  uint16_T UnitDelay_DSTATE_c;         /* '<S44>/Unit Delay' */
+  boolean_T Delay_DSTATE_j;            /* '<S77>/Delay' */
   uint8_T RT1_Buffer0[90];             /* '<S4>/RT1' */
-  uint8_T DiscreteTimeIntegrator_SYSTEM_E;/* '<S60>/Discrete-Time Integrator' */
-  uint8_T DiscreteTimeIntegrator2_SYSTEM_;/* '<S62>/Discrete-Time Integrator2' */
-  uint8_T DiscreteTimeIntegrator_SYSTEM_b;/* '<S62>/Discrete-Time Integrator' */
-  uint8_T DiscreteTimeIntegrator1_SYSTEM_;/* '<S62>/Discrete-Time Integrator1' */
-  uint8_T is_c3_Final_project_template;/* '<S29>/Chart' */
-  uint8_T is_active_c3_Final_project_temp;/* '<S29>/Chart' */
+  uint8_T DiscreteTimeIntegrator_SYSTEM_E;/* '<S65>/Discrete-Time Integrator' */
+  uint8_T DiscreteTimeIntegrator2_SYSTEM_;/* '<S67>/Discrete-Time Integrator2' */
+  uint8_T DiscreteTimeIntegrator_SYSTEM_b;/* '<S67>/Discrete-Time Integrator' */
+  uint8_T DiscreteTimeIntegrator1_SYSTEM_;/* '<S67>/Discrete-Time Integrator1' */
+  uint8_T is_c3_Final_project_template;/* '<S30>/Chart' */
+  uint8_T is_active_c3_Final_project_temp;/* '<S30>/Chart' */
   boolean_T RT_Buffer0;                /* '<S4>/RT' */
   boolean_T HighLevelDesign_RESET_ELAPS_T;/* '<Root>/High Level Design' */
   DW_SwitchCaseActionSubsystem3 SwitchCaseActionSubsystem3_f;
@@ -246,13 +248,13 @@ typedef struct {
 
 /* Zero-crossing (trigger) state */
 typedef struct {
-  ZCSigState ResettableSubsystem_Reset_ZCE;/* '<S73>/Resettable Subsystem' */
+  ZCSigState ResettableSubsystem_Reset_ZCE;/* '<S78>/Resettable Subsystem' */
 } PrevZCX;
 
 /* Constant parameters (default storage) */
 typedef struct {
   /* Pooled Parameter (Expression: single(1))
-   * Referenced by: '<S61>/S-Function Builder'
+   * Referenced by: '<S66>/S-Function Builder'
    */
   real32_T pooled6;
 } ConstP;
@@ -308,13 +310,15 @@ extern RT_MODEL *const rtM;
 /*-
  * These blocks were eliminated from the model due to optimizations:
  *
- * Block '<S29>/Display' : Unused code path elimination
- * Block '<S29>/Display1' : Unused code path elimination
- * Block '<S29>/Display2' : Unused code path elimination
- * Block '<S29>/Scope' : Unused code path elimination
- * Block '<S67>/Data Type Duplicate' : Unused code path elimination
- * Block '<S36>/Shift Arithmetic' : Eliminated trivial shift
- * Block '<S39>/Data Type Conversion' : Eliminate redundant data type conversion
+ * Block '<S30>/Display' : Unused code path elimination
+ * Block '<S30>/Display1' : Unused code path elimination
+ * Block '<S30>/Display2' : Unused code path elimination
+ * Block '<S30>/Scope' : Unused code path elimination
+ * Block '<S39>/Data Type Duplicate' : Unused code path elimination
+ * Block '<S40>/Data Type Duplicate' : Unused code path elimination
+ * Block '<S72>/Data Type Duplicate' : Unused code path elimination
+ * Block '<S41>/Shift Arithmetic' : Eliminated trivial shift
+ * Block '<S44>/Data Type Conversion' : Eliminate redundant data type conversion
  */
 
 /*-
@@ -357,55 +361,60 @@ extern RT_MODEL *const rtM;
  * '<S23>'  : 'Final_project_template/Can Network Inputs/Extract CAN data/Data to s,n,psi,us 5/Switch Case Action Subsystem2'
  * '<S24>'  : 'Final_project_template/Can Network Inputs/Extract CAN data/Data to s,n,psi,us 5/Switch Case Action Subsystem3'
  * '<S25>'  : 'Final_project_template/High Level Design/ACC'
- * '<S26>'  : 'Final_project_template/High Level Design/Inputs'
- * '<S27>'  : 'Final_project_template/High Level Design/Outputs'
- * '<S28>'  : 'Final_project_template/High Level Design/Vehicle Dynamics'
- * '<S29>'  : 'Final_project_template/High Level Design/ACC/ACC State Logic'
- * '<S30>'  : 'Final_project_template/High Level Design/ACC/Enabled Subsystem'
- * '<S31>'  : 'Final_project_template/High Level Design/ACC/Position Ctrl'
- * '<S32>'  : 'Final_project_template/High Level Design/ACC/Speed Ctrl'
- * '<S33>'  : 'Final_project_template/High Level Design/ACC/ACC State Logic/Chart'
- * '<S34>'  : 'Final_project_template/High Level Design/ACC/Speed Ctrl/PI'
- * '<S35>'  : 'Final_project_template/High Level Design/ACC/Speed Ctrl/PI/My Discrete Integrator'
- * '<S36>'  : 'Final_project_template/High Level Design/Inputs/Select Speed (GPI 122-129)'
- * '<S37>'  : 'Final_project_template/High Level Design/Inputs/Throttle (Potentiometer)'
- * '<S38>'  : 'Final_project_template/High Level Design/Inputs/get wheel position'
- * '<S39>'  : 'Final_project_template/High Level Design/Inputs/get wheel position/Subsystem'
- * '<S40>'  : 'Final_project_template/High Level Design/Outputs/Extract x,y,psi'
- * '<S41>'  : 'Final_project_template/High Level Design/Outputs/Extract x,y,psi (Cars 1 - 6)'
- * '<S42>'  : 'Final_project_template/High Level Design/Outputs/Tx CAN'
- * '<S43>'  : 'Final_project_template/High Level Design/Outputs/write torque'
- * '<S44>'  : 'Final_project_template/High Level Design/Outputs/Extract x,y,psi/s,n to x,y'
- * '<S45>'  : 'Final_project_template/High Level Design/Outputs/Extract x,y,psi (Cars 1 - 6)/Extract x,y,psi'
- * '<S46>'  : 'Final_project_template/High Level Design/Outputs/Extract x,y,psi (Cars 1 - 6)/Extract x,y,psi1'
- * '<S47>'  : 'Final_project_template/High Level Design/Outputs/Extract x,y,psi (Cars 1 - 6)/Extract x,y,psi2'
- * '<S48>'  : 'Final_project_template/High Level Design/Outputs/Extract x,y,psi (Cars 1 - 6)/Extract x,y,psi3'
- * '<S49>'  : 'Final_project_template/High Level Design/Outputs/Extract x,y,psi (Cars 1 - 6)/Extract x,y,psi4'
- * '<S50>'  : 'Final_project_template/High Level Design/Outputs/Extract x,y,psi (Cars 1 - 6)/Extract x,y,psi5'
- * '<S51>'  : 'Final_project_template/High Level Design/Outputs/Extract x,y,psi (Cars 1 - 6)/Extract x,y,psi/s,n to x,y'
- * '<S52>'  : 'Final_project_template/High Level Design/Outputs/Extract x,y,psi (Cars 1 - 6)/Extract x,y,psi1/s,n to x,y'
- * '<S53>'  : 'Final_project_template/High Level Design/Outputs/Extract x,y,psi (Cars 1 - 6)/Extract x,y,psi2/s,n to x,y'
- * '<S54>'  : 'Final_project_template/High Level Design/Outputs/Extract x,y,psi (Cars 1 - 6)/Extract x,y,psi3/s,n to x,y'
- * '<S55>'  : 'Final_project_template/High Level Design/Outputs/Extract x,y,psi (Cars 1 - 6)/Extract x,y,psi4/s,n to x,y'
- * '<S56>'  : 'Final_project_template/High Level Design/Outputs/Extract x,y,psi (Cars 1 - 6)/Extract x,y,psi5/s,n to x,y'
- * '<S57>'  : 'Final_project_template/High Level Design/Outputs/write torque/Write_Reaction_Torque'
- * '<S58>'  : 'Final_project_template/High Level Design/Vehicle Dynamics/Vehicle Dynamics'
- * '<S59>'  : 'Final_project_template/High Level Design/Vehicle Dynamics/outputs'
- * '<S60>'  : 'Final_project_template/High Level Design/Vehicle Dynamics/Vehicle Dynamics/Subsystem'
- * '<S61>'  : 'Final_project_template/High Level Design/Vehicle Dynamics/Vehicle Dynamics/Subsystem1'
- * '<S62>'  : 'Final_project_template/High Level Design/Vehicle Dynamics/Vehicle Dynamics/Subsystem2'
- * '<S63>'  : 'Final_project_template/High Level Design/Vehicle Dynamics/outputs/coordinate transform'
- * '<S64>'  : 'Final_project_template/High Level Design/Vehicle Dynamics/outputs/projected velocity'
- * '<S65>'  : 'Final_project_template/High Level Design/Vehicle Dynamics/outputs/coordinate transform/Look up Forward Vector'
- * '<S66>'  : 'Final_project_template/High Level Design/Vehicle Dynamics/outputs/coordinate transform/x,y to s,n'
- * '<S67>'  : 'Final_project_template/High Level Design/Vehicle Dynamics/outputs/coordinate transform/x,y to s,n/Data Type Conversion Inherited'
- * '<S68>'  : 'Final_project_template/High Level Design/Vehicle Dynamics/outputs/coordinate transform/x,y to s,n/Look up the Forward Vector'
- * '<S69>'  : 'Final_project_template/High Level Design/Vehicle Dynamics/outputs/coordinate transform/x,y to s,n/My Discrete Integrator'
- * '<S70>'  : 'Final_project_template/High Level Design/Vehicle Dynamics/outputs/coordinate transform/x,y to s,n/My Dot Product1'
- * '<S71>'  : 'Final_project_template/High Level Design/Vehicle Dynamics/outputs/coordinate transform/x,y to s,n/My Dot Product2'
- * '<S72>'  : 'Final_project_template/Serial Sim Out to Virtual Sim/Serial'
- * '<S73>'  : 'Final_project_template/Serial Sim Out to Virtual Sim/UART Iteration'
- * '<S74>'  : 'Final_project_template/Serial Sim Out to Virtual Sim/UART Iteration/Resettable Subsystem'
+ * '<S26>'  : 'Final_project_template/High Level Design/Auto Steering'
+ * '<S27>'  : 'Final_project_template/High Level Design/Inputs'
+ * '<S28>'  : 'Final_project_template/High Level Design/Outputs'
+ * '<S29>'  : 'Final_project_template/High Level Design/Vehicle Dynamics'
+ * '<S30>'  : 'Final_project_template/High Level Design/ACC/ACC State Logic'
+ * '<S31>'  : 'Final_project_template/High Level Design/ACC/Enabled Subsystem'
+ * '<S32>'  : 'Final_project_template/High Level Design/ACC/Position Ctrl'
+ * '<S33>'  : 'Final_project_template/High Level Design/ACC/Speed Ctrl'
+ * '<S34>'  : 'Final_project_template/High Level Design/ACC/ACC State Logic/Chart'
+ * '<S35>'  : 'Final_project_template/High Level Design/ACC/Speed Ctrl/PI'
+ * '<S36>'  : 'Final_project_template/High Level Design/ACC/Speed Ctrl/PI/My Discrete Integrator'
+ * '<S37>'  : 'Final_project_template/High Level Design/Auto Steering/inner loop PID1'
+ * '<S38>'  : 'Final_project_template/High Level Design/Auto Steering/outer loop PID'
+ * '<S39>'  : 'Final_project_template/High Level Design/Auto Steering/inner loop PID1/Discrete Derivative'
+ * '<S40>'  : 'Final_project_template/High Level Design/Auto Steering/outer loop PID/Discrete Derivative'
+ * '<S41>'  : 'Final_project_template/High Level Design/Inputs/Select Speed (GPI 122-129)'
+ * '<S42>'  : 'Final_project_template/High Level Design/Inputs/Throttle (Potentiometer)'
+ * '<S43>'  : 'Final_project_template/High Level Design/Inputs/get wheel position'
+ * '<S44>'  : 'Final_project_template/High Level Design/Inputs/get wheel position/Subsystem'
+ * '<S45>'  : 'Final_project_template/High Level Design/Outputs/Extract x,y,psi'
+ * '<S46>'  : 'Final_project_template/High Level Design/Outputs/Extract x,y,psi (Cars 1 - 6)'
+ * '<S47>'  : 'Final_project_template/High Level Design/Outputs/Tx CAN'
+ * '<S48>'  : 'Final_project_template/High Level Design/Outputs/write torque'
+ * '<S49>'  : 'Final_project_template/High Level Design/Outputs/Extract x,y,psi/s,n to x,y'
+ * '<S50>'  : 'Final_project_template/High Level Design/Outputs/Extract x,y,psi (Cars 1 - 6)/Extract x,y,psi'
+ * '<S51>'  : 'Final_project_template/High Level Design/Outputs/Extract x,y,psi (Cars 1 - 6)/Extract x,y,psi1'
+ * '<S52>'  : 'Final_project_template/High Level Design/Outputs/Extract x,y,psi (Cars 1 - 6)/Extract x,y,psi2'
+ * '<S53>'  : 'Final_project_template/High Level Design/Outputs/Extract x,y,psi (Cars 1 - 6)/Extract x,y,psi3'
+ * '<S54>'  : 'Final_project_template/High Level Design/Outputs/Extract x,y,psi (Cars 1 - 6)/Extract x,y,psi4'
+ * '<S55>'  : 'Final_project_template/High Level Design/Outputs/Extract x,y,psi (Cars 1 - 6)/Extract x,y,psi5'
+ * '<S56>'  : 'Final_project_template/High Level Design/Outputs/Extract x,y,psi (Cars 1 - 6)/Extract x,y,psi/s,n to x,y'
+ * '<S57>'  : 'Final_project_template/High Level Design/Outputs/Extract x,y,psi (Cars 1 - 6)/Extract x,y,psi1/s,n to x,y'
+ * '<S58>'  : 'Final_project_template/High Level Design/Outputs/Extract x,y,psi (Cars 1 - 6)/Extract x,y,psi2/s,n to x,y'
+ * '<S59>'  : 'Final_project_template/High Level Design/Outputs/Extract x,y,psi (Cars 1 - 6)/Extract x,y,psi3/s,n to x,y'
+ * '<S60>'  : 'Final_project_template/High Level Design/Outputs/Extract x,y,psi (Cars 1 - 6)/Extract x,y,psi4/s,n to x,y'
+ * '<S61>'  : 'Final_project_template/High Level Design/Outputs/Extract x,y,psi (Cars 1 - 6)/Extract x,y,psi5/s,n to x,y'
+ * '<S62>'  : 'Final_project_template/High Level Design/Outputs/write torque/Write_Reaction_Torque'
+ * '<S63>'  : 'Final_project_template/High Level Design/Vehicle Dynamics/Vehicle Dynamics'
+ * '<S64>'  : 'Final_project_template/High Level Design/Vehicle Dynamics/outputs'
+ * '<S65>'  : 'Final_project_template/High Level Design/Vehicle Dynamics/Vehicle Dynamics/Subsystem'
+ * '<S66>'  : 'Final_project_template/High Level Design/Vehicle Dynamics/Vehicle Dynamics/Subsystem1'
+ * '<S67>'  : 'Final_project_template/High Level Design/Vehicle Dynamics/Vehicle Dynamics/Subsystem2'
+ * '<S68>'  : 'Final_project_template/High Level Design/Vehicle Dynamics/outputs/coordinate transform'
+ * '<S69>'  : 'Final_project_template/High Level Design/Vehicle Dynamics/outputs/projected velocity'
+ * '<S70>'  : 'Final_project_template/High Level Design/Vehicle Dynamics/outputs/coordinate transform/Look up Forward Vector'
+ * '<S71>'  : 'Final_project_template/High Level Design/Vehicle Dynamics/outputs/coordinate transform/x,y to s,n'
+ * '<S72>'  : 'Final_project_template/High Level Design/Vehicle Dynamics/outputs/coordinate transform/x,y to s,n/Data Type Conversion Inherited'
+ * '<S73>'  : 'Final_project_template/High Level Design/Vehicle Dynamics/outputs/coordinate transform/x,y to s,n/Look up the Forward Vector'
+ * '<S74>'  : 'Final_project_template/High Level Design/Vehicle Dynamics/outputs/coordinate transform/x,y to s,n/My Discrete Integrator'
+ * '<S75>'  : 'Final_project_template/High Level Design/Vehicle Dynamics/outputs/coordinate transform/x,y to s,n/My Dot Product1'
+ * '<S76>'  : 'Final_project_template/High Level Design/Vehicle Dynamics/outputs/coordinate transform/x,y to s,n/My Dot Product2'
+ * '<S77>'  : 'Final_project_template/Serial Sim Out to Virtual Sim/Serial'
+ * '<S78>'  : 'Final_project_template/Serial Sim Out to Virtual Sim/UART Iteration'
+ * '<S79>'  : 'Final_project_template/Serial Sim Out to Virtual Sim/UART Iteration/Resettable Subsystem'
  */
 #endif                                /* RTW_HEADER_Final_project_template_h_ */
 

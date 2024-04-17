@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <MF0 version="1.1" packageUris="http://schema.mathworks.com/mf0/ci/19700101 http://schema.mathworks.com/mf0/sl_modelref_info/R2022b http://schema.mathworks.com/mf0/slexec_mm_sto/R2022b_202202091112 http://schema.mathworks.com/mf0/sltp_mm/R2022b_202203181029">
-  <ModelRefInfoRepo.ModelRefInfoRoot type="ModelRefInfoRepo.ModelRefInfoRoot" uuid="fbe086c7-4ab9-4ec1-9920-a8700af1cc67">
+  <ModelRefInfoRepo.ModelRefInfoRoot type="ModelRefInfoRepo.ModelRefInfoRoot" uuid="98faa844-5fe7-4c62-b9a4-9749d17e6354">
     <JITEngines>sviRLYJftbugCDQbKhr0huD</JITEngines>
-    <calibrationData type="ModelRefInfoRepo.CalibrationData" uuid="b7839091-5386-49f1-8a1a-f6a6cbf62996">
+    <calibrationData type="ModelRefInfoRepo.CalibrationData" uuid="d82d67c1-0d1e-4941-9184-2b6619a04fbf">
       <InternalData>[{&quot;Name&quot;:&quot;&quot;,&quot;Profile&quot;:&quot;&quot;},{&quot;Name&quot;:&quot;&quot;,&quot;Profile&quot;:&quot;&quot;},{&quot;Name&quot;:&quot;&quot;,&quot;Profile&quot;:&quot;&quot;},{&quot;Name&quot;:&quot;&quot;,&quot;Profile&quot;:&quot;&quot;},{&quot;Name&quot;:&quot;&quot;,&quot;Profile&quot;:&quot;&quot;},{&quot;Name&quot;:&quot;&quot;,&quot;Profile&quot;:&quot;&quot;},{&quot;Name&quot;:&quot;&quot;,&quot;Profile&quot;:&quot;&quot;},{&quot;Name&quot;:&quot;&quot;,&quot;Profile&quot;:&quot;&quot;},{&quot;Name&quot;:&quot;&quot;,&quot;Profile&quot;:&quot;&quot;},{&quot;Name&quot;:&quot;&quot;,&quot;Profile&quot;:&quot;&quot;},{&quot;Name&quot;:&quot;&quot;,&quot;Profile&quot;:&quot;&quot;},{&quot;Name&quot;:&quot;&quot;,&quot;Profile&quot;:&quot;&quot;}]</InternalData>
       <ModelName>Final_project_template</ModelName>
     </calibrationData>
-    <childModelRefInfo type="ModelRefInfoRepo.ChildModelRefInfo" uuid="0d58a199-9aa4-47e3-a109-b7f5f61b82c1">
+    <childModelRefInfo type="ModelRefInfoRepo.ChildModelRefInfo" uuid="278cfb2d-a7b9-4ed6-895e-fb8be9de8b2b">
       <modelName>Final_project_template</modelName>
       <modelPath>Final_project_template</modelPath>
     </childModelRefInfo>
@@ -18,12 +18,17 @@
     <globalVariables>Chase_Ctrl_x0</globalVariables>
     <globalVariables>H</globalVariables>
     <globalVariables>R</globalVariables>
+    <globalVariables>S_Kd1</globalVariables>
+    <globalVariables>S_Kd2</globalVariables>
+    <globalVariables>S_Kp1</globalVariables>
+    <globalVariables>S_Kp2</globalVariables>
     <globalVariables>V_Ki</globalVariables>
     <globalVariables>V_Kp</globalVariables>
     <globalVariables>b</globalVariables>
     <globalVariables>base_ids</globalVariables>
     <globalVariables>dT</globalVariables>
     <globalVariables>m</globalVariables>
+    <globalVariables>n_desired</globalVariables>
     <globalVariables>pot_gain</globalVariables>
     <globalVariables>pot_offset</globalVariables>
     <globalVariables>v0</globalVariables>
@@ -37,10 +42,10 @@
     <loggingSaveFormat>2</loggingSaveFormat>
     <maxFreqHz>-1.0</maxFreqHz>
     <needElapsedTime>true</needElapsedTime>
-    <numDStateRecs>12</numDStateRecs>
+    <numDStateRecs>14</numDStateRecs>
     <numDataInputPorts>0</numDataInputPorts>
-    <numLoggableDStateRecs>12</numLoggableDStateRecs>
-    <numLoggableJacobianDStates>13</numLoggableJacobianDStates>
+    <numLoggableDStateRecs>14</numLoggableDStateRecs>
+    <numLoggableJacobianDStates>15</numLoggableJacobianDStates>
     <removeResetFunc>true</removeResetFunc>
     <runtimeNonFcnCallRateInfos type="ModelRefInfoRepo.RateInfo">
       <compiled>true</compiled>
@@ -68,68 +73,68 @@
     <solverStatusFlags>323</solverStatusFlags>
     <timingAndTaskingRegistry>&lt;?xml version=&quot;1.0&quot;?&gt;
 &lt;slexec_sto version=&quot;1.1&quot; packageUris=&quot;http://schema.mathworks.com/mf0/slexec_mm_sto/R2022b_202202091112&quot;&gt;
-  &lt;sto.Registry type=&quot;sto.Registry&quot; uuid=&quot;89d6c7d9-5526-4420-b3d0-9f3a64bc5488&quot;&gt;
+  &lt;sto.Registry type=&quot;sto.Registry&quot; uuid=&quot;ab3de648-d2db-4f6f-9489-0d275705be18&quot;&gt;
     &lt;executionSpec&gt;Undetermined&lt;/executionSpec&gt;
-    &lt;clockRegistry type=&quot;sto.ClockRegistry&quot; uuid=&quot;8e084f88-6389-46d7-b20d-fe90296e3854&quot;&gt;
-      &lt;clocks type=&quot;sto.Timer&quot; uuid=&quot;954777db-bf51-4f50-9b09-dbae37db602f&quot;&gt;
+    &lt;clockRegistry type=&quot;sto.ClockRegistry&quot; uuid=&quot;5d60b019-fe57-4611-ba0d-dc1f82ffc3eb&quot;&gt;
+      &lt;clocks type=&quot;sto.Timer&quot; uuid=&quot;d2cc0c78-de89-4133-a948-7d66a0e8d8a1&quot;&gt;
         &lt;clockTickConstraint&gt;PeriodicWithFixedResolution&lt;/clockTickConstraint&gt;
         &lt;computedFundamentalDiscretePeriod&gt;.0005&lt;/computedFundamentalDiscretePeriod&gt;
         &lt;resolution&gt;.0005&lt;/resolution&gt;
         &lt;timeAdvanceMode&gt;FixedStep&lt;/timeAdvanceMode&gt;
-        &lt;rates type=&quot;sto.ClassicPeriodicDiscreteRate&quot; uuid=&quot;4eaab14e-938e-4972-a173-ab68a440453c&quot;&gt;
+        &lt;rates type=&quot;sto.ClassicPeriodicDiscreteRate&quot; uuid=&quot;1de9d29b-fd01-4d51-9ba7-da1838f0d2a3&quot;&gt;
           &lt;annotation&gt;D1&lt;/annotation&gt;
           &lt;colorIndex&gt;2&lt;/colorIndex&gt;
           &lt;description&gt;Discrete 1&lt;/description&gt;
           &lt;taskId&gt;_task0&lt;/taskId&gt;
-          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;5fc41cb4-f4af-42f3-9ea7-9219001f45d9&quot;&gt;
+          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;c0bf509a-ac9e-4753-b7c2-d4195fb51913&quot;&gt;
             &lt;period&gt;.0005&lt;/period&gt;
             &lt;rateType&gt;ClassicPeriodicDiscrete&lt;/rateType&gt;
           &lt;/rateSpec&gt;
         &lt;/rates&gt;
-        &lt;rates type=&quot;sto.ClassicPeriodicDiscreteRate&quot; uuid=&quot;f407e2b6-592a-484a-b470-c6a489bb0e85&quot;&gt;
+        &lt;rates type=&quot;sto.ClassicPeriodicDiscreteRate&quot; uuid=&quot;cd992a11-a3d5-448f-a95d-99d6693a70b0&quot;&gt;
           &lt;annotation&gt;D2&lt;/annotation&gt;
           &lt;colorIndex&gt;3&lt;/colorIndex&gt;
           &lt;description&gt;Discrete 2&lt;/description&gt;
           &lt;rateIdx&gt;1&lt;/rateIdx&gt;
           &lt;taskId&gt;_task1&lt;/taskId&gt;
-          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;fd5cf76f-3e73-4599-bf9b-3ac4c617ee7e&quot;&gt;
+          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;f27097ba-8a2d-4458-9868-aced91c057dd&quot;&gt;
             &lt;period&gt;.01&lt;/period&gt;
             &lt;rateType&gt;ClassicPeriodicDiscrete&lt;/rateType&gt;
           &lt;/rateSpec&gt;
         &lt;/rates&gt;
-        &lt;rates type=&quot;sto.ClassicPeriodicDiscreteRate&quot; uuid=&quot;68721f47-15a4-42b9-b896-5d05a1d6be91&quot;&gt;
+        &lt;rates type=&quot;sto.ClassicPeriodicDiscreteRate&quot; uuid=&quot;9ad0608c-efd2-4e3e-983a-712cd197b938&quot;&gt;
           &lt;annotation&gt;D3&lt;/annotation&gt;
           &lt;colorIndex&gt;4&lt;/colorIndex&gt;
           &lt;description&gt;Discrete 3&lt;/description&gt;
           &lt;rateIdx&gt;2&lt;/rateIdx&gt;
           &lt;taskId&gt;_task2&lt;/taskId&gt;
-          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;680ea942-cebc-4f06-bd65-2867416c2a80&quot;&gt;
+          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;33f0f9da-449b-4a8b-a891-dd43dfc7bd7b&quot;&gt;
             &lt;period&gt;.05&lt;/period&gt;
             &lt;rateType&gt;ClassicPeriodicDiscrete&lt;/rateType&gt;
           &lt;/rateSpec&gt;
         &lt;/rates&gt;
-        &lt;baseRate type=&quot;sto.ClassicPeriodicDiscreteRate&quot; uuid=&quot;8935fcfd-2c7b-4945-afdb-7295b62c5a91&quot;&gt;
+        &lt;baseRate type=&quot;sto.ClassicPeriodicDiscreteRate&quot; uuid=&quot;a6115bc1-de9f-4ce1-a22c-93267472cf8b&quot;&gt;
           &lt;annotation&gt;D1&lt;/annotation&gt;
           &lt;colorIndex&gt;2&lt;/colorIndex&gt;
           &lt;description&gt;Discrete 1&lt;/description&gt;
           &lt;taskId&gt;_task0&lt;/taskId&gt;
-          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;daa81f97-d4da-4919-bed6-79f74ce47b52&quot;&gt;
+          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;bdec05e1-b4a9-4e2d-9e91-672d97eb7077&quot;&gt;
             &lt;period&gt;.0005&lt;/period&gt;
             &lt;rateType&gt;ClassicPeriodicDiscrete&lt;/rateType&gt;
           &lt;/rateSpec&gt;
         &lt;/baseRate&gt;
       &lt;/clocks&gt;
-      &lt;clocks type=&quot;sto.Event&quot; uuid=&quot;746fcf0f-8b89-42a8-b495-cb26728b1be5&quot;&gt;
+      &lt;clocks type=&quot;sto.Event&quot; uuid=&quot;61c6d5b3-7c18-4959-b689-32afabf0dadc&quot;&gt;
         &lt;eventType&gt;PARAMETER_CHANGE_EVENT&lt;/eventType&gt;
         &lt;cNum&gt;1&lt;/cNum&gt;
         &lt;clockType&gt;Event&lt;/clockType&gt;
         &lt;identifier&gt;ParameterChangeEvent&lt;/identifier&gt;
-        &lt;rates type=&quot;sto.ModelWideEventRate&quot; uuid=&quot;70777b52-280c-453e-b244-33fb0f4fbfb5&quot;&gt;
+        &lt;rates type=&quot;sto.ModelWideEventRate&quot; uuid=&quot;4ceaa1c4-0090-452b-a9b4-ddde9e586602&quot;&gt;
           &lt;clockId&gt;ParameterChangeEvent&lt;/clockId&gt;
           &lt;rateIdx&gt;-1&lt;/rateIdx&gt;
           &lt;taskId&gt;ModelWideParameterChangeEvent&lt;/taskId&gt;
           &lt;useForExecution&gt;NotForExecution&lt;/useForExecution&gt;
-          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;0d5cdaf2-b8aa-4870-ae7a-a2a49fad294c&quot;&gt;
+          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;5a333fe0-3ee7-450d-988a-5f864479a43a&quot;&gt;
             &lt;period&gt;inf&lt;/period&gt;
             &lt;rateType&gt;ModelWideParameterChangeEvent&lt;/rateType&gt;
           &lt;/rateSpec&gt;
@@ -137,15 +142,15 @@
       &lt;/clocks&gt;
       &lt;timeAdvanceMode&gt;FixedStep&lt;/timeAdvanceMode&gt;
     &lt;/clockRegistry&gt;
-    &lt;taskRegistry type=&quot;sto.TaskRegistry&quot; uuid=&quot;d849076a-0203-4e38-a236-bc92be498403&quot;&gt;
-      &lt;rootTaskHierarchyElements type=&quot;sto.Task&quot; uuid=&quot;8904a768-ee5b-4335-8f75-b158eba18703&quot;&gt;
+    &lt;taskRegistry type=&quot;sto.TaskRegistry&quot; uuid=&quot;0712f183-f463-43d1-aa90-ad649b6fe312&quot;&gt;
+      &lt;rootTaskHierarchyElements type=&quot;sto.Task&quot; uuid=&quot;f2b36cdf-3cd1-481e-a009-6d52aeb9516b&quot;&gt;
         &lt;isExplicit&gt;true&lt;/isExplicit&gt;
-        &lt;rates type=&quot;sto.ModelWideEventRate&quot; uuid=&quot;34214cb4-0616-496c-8d5a-b98ddae1e02a&quot;&gt;
+        &lt;rates type=&quot;sto.ModelWideEventRate&quot; uuid=&quot;5ccb6411-9d4b-4105-b499-d05d123c46a4&quot;&gt;
           &lt;clockId&gt;ParameterChangeEvent&lt;/clockId&gt;
           &lt;rateIdx&gt;-1&lt;/rateIdx&gt;
           &lt;taskId&gt;ModelWideParameterChangeEvent&lt;/taskId&gt;
           &lt;useForExecution&gt;NotForExecution&lt;/useForExecution&gt;
-          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;e9fc952d-2644-4025-80fb-30dd22d040af&quot;&gt;
+          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;3c731de8-8587-493c-9c2c-fa56f8d380a4&quot;&gt;
             &lt;period&gt;inf&lt;/period&gt;
             &lt;rateType&gt;ModelWideParameterChangeEvent&lt;/rateType&gt;
           &lt;/rateSpec&gt;
@@ -155,15 +160,15 @@
         &lt;identifier&gt;ModelWideParameterChangeEvent&lt;/identifier&gt;
         &lt;priority&gt;-1&lt;/priority&gt;
       &lt;/rootTaskHierarchyElements&gt;
-      &lt;rootTaskHierarchyElements type=&quot;sto.Task&quot; uuid=&quot;f9bb5ab0-552f-4051-97f2-acb4620eee7d&quot;&gt;
+      &lt;rootTaskHierarchyElements type=&quot;sto.Task&quot; uuid=&quot;763922f6-1a2b-41ab-83a4-65e448463beb&quot;&gt;
         &lt;isExecutable&gt;true&lt;/isExecutable&gt;
         &lt;orderIndex&gt;1&lt;/orderIndex&gt;
-        &lt;rates type=&quot;sto.ClassicPeriodicDiscreteRate&quot; uuid=&quot;729a1b5f-9bb1-4a15-972c-3e1263bc5eda&quot;&gt;
+        &lt;rates type=&quot;sto.ClassicPeriodicDiscreteRate&quot; uuid=&quot;06913fff-a159-497e-a3a8-c48b17f4d333&quot;&gt;
           &lt;annotation&gt;D1&lt;/annotation&gt;
           &lt;colorIndex&gt;2&lt;/colorIndex&gt;
           &lt;description&gt;Discrete 1&lt;/description&gt;
           &lt;taskId&gt;_task0&lt;/taskId&gt;
-          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;cd96f532-8068-49b3-903c-153dd77876f7&quot;&gt;
+          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;573d7681-7d95-4215-98d7-c3a3a9cbb52c&quot;&gt;
             &lt;period&gt;.0005&lt;/period&gt;
             &lt;rateType&gt;ClassicPeriodicDiscrete&lt;/rateType&gt;
           &lt;/rateSpec&gt;
@@ -172,16 +177,16 @@
         &lt;identifier&gt;_task0&lt;/identifier&gt;
         &lt;priority&gt;40&lt;/priority&gt;
       &lt;/rootTaskHierarchyElements&gt;
-      &lt;rootTaskHierarchyElements type=&quot;sto.Task&quot; uuid=&quot;2684f533-9be6-428f-9078-2753bc189d04&quot;&gt;
+      &lt;rootTaskHierarchyElements type=&quot;sto.Task&quot; uuid=&quot;3c094123-9c7a-47cf-95d2-de9c7aa6c7af&quot;&gt;
         &lt;isExecutable&gt;true&lt;/isExecutable&gt;
         &lt;orderIndex&gt;2&lt;/orderIndex&gt;
-        &lt;rates type=&quot;sto.ClassicPeriodicDiscreteRate&quot; uuid=&quot;7c7acdd1-2e16-4776-9f85-ea3faeb1d30c&quot;&gt;
+        &lt;rates type=&quot;sto.ClassicPeriodicDiscreteRate&quot; uuid=&quot;63716d20-15a4-439f-883f-d0abf669342e&quot;&gt;
           &lt;annotation&gt;D2&lt;/annotation&gt;
           &lt;colorIndex&gt;3&lt;/colorIndex&gt;
           &lt;description&gt;Discrete 2&lt;/description&gt;
           &lt;rateIdx&gt;1&lt;/rateIdx&gt;
           &lt;taskId&gt;_task1&lt;/taskId&gt;
-          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;7ad54c3b-afe0-4127-8efd-d2d55573efc9&quot;&gt;
+          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;b410ce5a-c881-46f4-b6ae-957511742dea&quot;&gt;
             &lt;period&gt;.01&lt;/period&gt;
             &lt;rateType&gt;ClassicPeriodicDiscrete&lt;/rateType&gt;
           &lt;/rateSpec&gt;
@@ -191,16 +196,16 @@
         &lt;identifier&gt;_task1&lt;/identifier&gt;
         &lt;priority&gt;41&lt;/priority&gt;
       &lt;/rootTaskHierarchyElements&gt;
-      &lt;rootTaskHierarchyElements type=&quot;sto.Task&quot; uuid=&quot;a2feb94d-5cba-4efb-a087-89867ba0683c&quot;&gt;
+      &lt;rootTaskHierarchyElements type=&quot;sto.Task&quot; uuid=&quot;f5bf5162-1d6d-45e2-a1fa-1569f6d0c443&quot;&gt;
         &lt;isExecutable&gt;true&lt;/isExecutable&gt;
         &lt;orderIndex&gt;3&lt;/orderIndex&gt;
-        &lt;rates type=&quot;sto.ClassicPeriodicDiscreteRate&quot; uuid=&quot;926a88b1-723e-4867-aaa8-e3d35c553a0f&quot;&gt;
+        &lt;rates type=&quot;sto.ClassicPeriodicDiscreteRate&quot; uuid=&quot;1121b73a-b63d-4a19-a376-6d0977229726&quot;&gt;
           &lt;annotation&gt;D3&lt;/annotation&gt;
           &lt;colorIndex&gt;4&lt;/colorIndex&gt;
           &lt;description&gt;Discrete 3&lt;/description&gt;
           &lt;rateIdx&gt;2&lt;/rateIdx&gt;
           &lt;taskId&gt;_task2&lt;/taskId&gt;
-          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;49bf9a3e-ad34-4afd-bc97-a55d561c90b6&quot;&gt;
+          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;eedc09fe-2697-44ea-99a5-f03776209547&quot;&gt;
             &lt;period&gt;.05&lt;/period&gt;
             &lt;rateType&gt;ClassicPeriodicDiscrete&lt;/rateType&gt;
           &lt;/rateSpec&gt;
@@ -210,32 +215,32 @@
         &lt;identifier&gt;_task2&lt;/identifier&gt;
         &lt;priority&gt;42&lt;/priority&gt;
       &lt;/rootTaskHierarchyElements&gt;
-      &lt;taskDependencyGraph type=&quot;sto.SerializedTaskConnectionList&quot; uuid=&quot;d0f9ef7f-b4a2-4ed2-8cb7-6fd000f2b7c7&quot;&gt;
-        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;82a11613-e1fb-4517-93d2-f5775c4005b0&quot;&gt;
+      &lt;taskDependencyGraph type=&quot;sto.SerializedTaskConnectionList&quot; uuid=&quot;8fe4e810-8a42-4105-8538-c6c3c5a84919&quot;&gt;
+        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;911a86da-1d68-4054-81e9-a5f177b91731&quot;&gt;
           &lt;orderingImpact&gt;Impacted&lt;/orderingImpact&gt;
           &lt;targetTaskIdentifier&gt;_task0&lt;/targetTaskIdentifier&gt;
         &lt;/serializedConnectionProperties&gt;
-        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;06d47ca8-d933-4c77-9bdf-0e5000ccf5a3&quot;&gt;
+        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;b1872b15-b43c-40b9-9d55-9c88c1efabd4&quot;&gt;
           &lt;isInternal&gt;true&lt;/isInternal&gt;
           &lt;targetTaskIdentifier&gt;_task1&lt;/targetTaskIdentifier&gt;
         &lt;/serializedConnectionProperties&gt;
         &lt;taskIdentifier&gt;_task2&lt;/taskIdentifier&gt;
       &lt;/taskDependencyGraph&gt;
-      &lt;taskDependencyGraph type=&quot;sto.SerializedTaskConnectionList&quot; uuid=&quot;460dcfcd-42c0-41e9-a3af-827c27b6172e&quot;&gt;
-        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;41139278-d084-4798-8ef4-7efed4e6d203&quot;&gt;
+      &lt;taskDependencyGraph type=&quot;sto.SerializedTaskConnectionList&quot; uuid=&quot;8898c9ac-a762-4db7-afc0-d235123b1ea2&quot;&gt;
+        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;e0337ecc-a840-470c-a5ee-00389453e251&quot;&gt;
           &lt;orderingImpact&gt;Impacted&lt;/orderingImpact&gt;
           &lt;targetTaskIdentifier&gt;_task2&lt;/targetTaskIdentifier&gt;
         &lt;/serializedConnectionProperties&gt;
         &lt;taskIdentifier&gt;_task1&lt;/taskIdentifier&gt;
       &lt;/taskDependencyGraph&gt;
-      &lt;taskDependencyGraph type=&quot;sto.SerializedTaskConnectionList&quot; uuid=&quot;f6201e11-aae6-445b-a7c1-4de4ab6fb1f3&quot;&gt;
-        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;152e90d1-03f7-4b5c-b025-3f18b7c9420e&quot;&gt;
+      &lt;taskDependencyGraph type=&quot;sto.SerializedTaskConnectionList&quot; uuid=&quot;dcccb5d0-db2c-439e-bd15-d16ae2e625de&quot;&gt;
+        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;f9bfa7dd-152a-4112-825c-947301f95d7c&quot;&gt;
           &lt;isInternal&gt;true&lt;/isInternal&gt;
           &lt;targetTaskIdentifier&gt;_task2&lt;/targetTaskIdentifier&gt;
         &lt;/serializedConnectionProperties&gt;
         &lt;taskIdentifier&gt;_task0&lt;/taskIdentifier&gt;
       &lt;/taskDependencyGraph&gt;
-      &lt;taskDependencyGraph type=&quot;sto.SerializedTaskConnectionList&quot; uuid=&quot;41f9ffaf-66be-4efc-8a43-bf52ce0dd738&quot;&gt;
+      &lt;taskDependencyGraph type=&quot;sto.SerializedTaskConnectionList&quot; uuid=&quot;fa806b17-33d5-4bb6-96bb-6bd1aab24ee5&quot;&gt;
         &lt;clockIdentifier&gt;ParameterChangeEvent&lt;/clockIdentifier&gt;
         &lt;taskIdentifier&gt;ModelWideParameterChangeEvent&lt;/taskIdentifier&gt;
       &lt;/taskDependencyGraph&gt;
@@ -244,7 +249,7 @@
     &lt;/taskRegistry&gt;
   &lt;/sto.Registry&gt;
 &lt;/slexec_sto&gt;</timingAndTaskingRegistry>
-    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="136c10f8-8adc-42da-960d-76687adbbe56">
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="fa7baa96-46b5-406e-90dc-32b57e3e1f20">
       <direction>63</direction>
       <isDiscrete>true</isDiscrete>
       <name>Reset</name>
@@ -254,10 +259,10 @@
       <width>1</width>
     </zeroCrossingInfo>
     <zeroInternalMemoryAtStartupUnchecked>true</zeroInternalMemoryAtStartupUnchecked>
-    <FMUBlockMap type="ModelRefInfoRepo.FMUBlockInfo" uuid="96c98384-3fba-4b48-8c3c-e9f559c980ae"/>
-    <codeGenInfo type="ModelRefInfoRepo.CodeGenInformation" uuid="3bf8d01e-33af-4c32-8569-10cdaeeba85d"/>
-    <compiledVariantInfos type="ModelRefInfoRepo.CompiledVariantInfoMap" uuid="f4cd3c69-7621-476d-9bc9-523124f9f4ff"/>
-    <configSettingsForConsistencyChecks type="ModelRefInfoRepo.ConfigSettingsForConsistencyChecks" uuid="cdd24691-1802-4a06-b5c5-d47f0c442a5a">
+    <FMUBlockMap type="ModelRefInfoRepo.FMUBlockInfo" uuid="97aa3913-8be3-4f19-8607-7424da180eb4"/>
+    <codeGenInfo type="ModelRefInfoRepo.CodeGenInformation" uuid="43f62060-4c24-416a-af81-4b969987009f"/>
+    <compiledVariantInfos type="ModelRefInfoRepo.CompiledVariantInfoMap" uuid="4b183daf-957a-47d9-a535-15bab0dcc8b0"/>
+    <configSettingsForConsistencyChecks type="ModelRefInfoRepo.ConfigSettingsForConsistencyChecks" uuid="07c9b5ca-1033-41a0-b508-8246349003a9">
       <consistentOutportInitialization>true</consistentOutportInitialization>
       <fixedStepSize>.0005</fixedStepSize>
       <frameDiagnosticSetting>2</frameDiagnosticSetting>
@@ -270,7 +275,7 @@
       <solverName>FixedStepDiscrete</solverName>
       <solverType>SOLVER_TYPE_FIXEDSTEP</solverType>
       <useDivForNetSlopComp>2</useDivForNetSlopComp>
-      <hardwareSettings type="ModelRefInfoRepo.HardwareSettings" uuid="84281c1a-25f0-49a9-9c9f-c013ffa64ba6">
+      <hardwareSettings type="ModelRefInfoRepo.HardwareSettings" uuid="93e30bf9-54f1-4148-aac2-6eedb65a57ef">
         <prodBitPerChar>8</prodBitPerChar>
         <prodBitPerDouble>64</prodBitPerDouble>
         <prodBitPerFloat>32</prodBitPerFloat>
@@ -288,73 +293,75 @@
         <prodWordSize>32</prodWordSize>
       </hardwareSettings>
     </configSettingsForConsistencyChecks>
-    <controllableInputRatesMap type="ModelRefInfoRepo.VarTsUIDMap" uuid="b3a6fc6f-bc70-45bf-973e-83ae98bf0f75"/>
-    <controllableOutputRatesMap type="ModelRefInfoRepo.VarTsUIDMap" uuid="b41951af-a0bb-459a-812d-48edb8543376"/>
-    <dataPortGroup type="ModelRefInfoRepo.DataPortGroup" uuid="34666e01-c428-47ae-98d3-b820a4e7e00c"/>
-    <expFcnUnconnectedDataPortGroup type="ModelRefInfoRepo.DataPortGroup" uuid="e97ef0aa-2033-46db-a121-02a33f62fb7e"/>
-    <interfaceParameterInfo type="ModelRefInfoRepo.InterfaceParameterInfo" uuid="33c7b66e-b713-41d2-b1b6-83fe347d4a1e"/>
-    <messageInfo type="ModelRefInfoRepo.MessageInformation" uuid="6c333cc0-8999-48e0-8a33-b6fd8e3aaa02"/>
-    <methodInfo type="ModelRefInfoRepo.MethodExistenceInfo" uuid="e8db761e-9b0b-48e2-8ac7-0fc903cb34f4">
+    <controllableInputRatesMap type="ModelRefInfoRepo.VarTsUIDMap" uuid="680df8ca-fe84-4fc3-ab67-34c6bad8ca04"/>
+    <controllableOutputRatesMap type="ModelRefInfoRepo.VarTsUIDMap" uuid="8d3e009a-ef95-47dc-bc66-4937fe67e2e8"/>
+    <dataPortGroup type="ModelRefInfoRepo.DataPortGroup" uuid="6af75b3d-1dfa-4ecb-832e-522484b87ec4"/>
+    <expFcnUnconnectedDataPortGroup type="ModelRefInfoRepo.DataPortGroup" uuid="3e0ba0d0-114e-43fa-9e11-a217aff53b80"/>
+    <interfaceParameterInfo type="ModelRefInfoRepo.InterfaceParameterInfo" uuid="881e7dd6-2cb6-447d-b121-f718c929ddfe"/>
+    <messageInfo type="ModelRefInfoRepo.MessageInformation" uuid="2529d55c-cff7-4997-81a7-f0639a696601"/>
+    <methodInfo type="ModelRefInfoRepo.MethodExistenceInfo" uuid="628b6a29-ac31-455d-a889-d259d959e9bc">
       <hasEnableMethod>true</hasEnableMethod>
       <hasSystemInitializeMethod>true</hasSystemInitializeMethod>
       <hasSystemResetMethod>true</hasSystemResetMethod>
       <hasTerminateMethod>true</hasTerminateMethod>
       <hasUpdateMethod>true</hasUpdateMethod>
     </methodInfo>
-    <periodicEventPortUnsupportedBlockInfo type="ModelRefInfoRepo.PeriodicEventPortUnsupportedBlockInfo" uuid="fdcdabfa-4f9e-4f5c-908e-6c9847b8f1ea">
+    <periodicEventPortUnsupportedBlockInfo type="ModelRefInfoRepo.PeriodicEventPortUnsupportedBlockInfo" uuid="c0013666-e927-4164-94e2-126ef4fb1a8e">
       <deterministicRTBs>Final_project_template/Rate Transition</deterministicRTBs>
       <deterministicRTBs>Final_project_template/Serial Sim Out to Virtual Sim/RT</deterministicRTBs>
       <deterministicRTBs>Final_project_template/Serial Sim Out to Virtual Sim/RT1</deterministicRTBs>
+      <triggeredRateElapsedTimeBlocks>Final_project_template/High Level Design/Auto Steering/inner loop PID1/Discrete Derivative/TSamp</triggeredRateElapsedTimeBlocks>
+      <triggeredRateElapsedTimeBlocks>Final_project_template/High Level Design/Auto Steering/outer loop PID/Discrete Derivative/TSamp</triggeredRateElapsedTimeBlocks>
       <triggeredRateElapsedTimeBlocks>Final_project_template/High Level Design/Vehicle Dynamics/Vehicle Dynamics/Subsystem/Discrete-Time Integrator</triggeredRateElapsedTimeBlocks>
       <triggeredRateElapsedTimeBlocks>Final_project_template/High Level Design/Vehicle Dynamics/Vehicle Dynamics/Subsystem2/Discrete-Time Integrator</triggeredRateElapsedTimeBlocks>
       <triggeredRateElapsedTimeBlocks>Final_project_template/High Level Design/Vehicle Dynamics/Vehicle Dynamics/Subsystem2/Discrete-Time Integrator1</triggeredRateElapsedTimeBlocks>
       <triggeredRateElapsedTimeBlocks>Final_project_template/High Level Design/Vehicle Dynamics/Vehicle Dynamics/Subsystem2/Discrete-Time Integrator2</triggeredRateElapsedTimeBlocks>
     </periodicEventPortUnsupportedBlockInfo>
-    <portGroupsRequireSameRate type="ModelRefInfoRepo.PortGroupsRequireSameRate" uuid="053eed7e-26ce-4eda-9d99-c9ef1d7a168f">
-      <DSMPortGroups type="ModelRefInfoRepo.NameToPortGroupIdxVectMap" uuid="47be43ab-66db-4f69-b7c2-6568a9ccc881"/>
-      <GlobalDSMPortGroups type="ModelRefInfoRepo.NameToPortGroupIdxVectMap" uuid="0df90d3c-fce1-47ed-ac0c-e5a7759874aa"/>
-      <mergedPortGroups type="ModelRefInfoRepo.NameToPortGroupIdxVectMap" uuid="9b90947f-5e80-4595-8a49-a644c47c70a0"/>
+    <portGroupsRequireSameRate type="ModelRefInfoRepo.PortGroupsRequireSameRate" uuid="db0df226-646a-4d50-ab4a-5f6d48c64b69">
+      <DSMPortGroups type="ModelRefInfoRepo.NameToPortGroupIdxVectMap" uuid="8c64b9b4-ce94-4670-84e8-7b00846fc856"/>
+      <GlobalDSMPortGroups type="ModelRefInfoRepo.NameToPortGroupIdxVectMap" uuid="e78dfdb6-94ba-40ac-ae65-86a78be67d9b"/>
+      <mergedPortGroups type="ModelRefInfoRepo.NameToPortGroupIdxVectMap" uuid="16e44928-7b09-4b89-8b41-b7b11662e501"/>
     </portGroupsRequireSameRate>
-    <rateBasedMdlGlobalDSMRateSpec type="ModelRefInfoRepo.GlobalDSMRateSpecMap" uuid="cefae311-a3b9-45a6-87e7-5ecd0f471511"/>
-    <rateSpecOfGlobalDSMAccessedByDescExpFcnMdlMap type="ModelRefInfoRepo.GlobalDSMRateSpecMap" uuid="f2f8d707-c0dd-4e44-ad3e-1ce8fdfd1d22"/>
-    <rootBlockDiagramInterface type="ci.Model" uuid="33527640-97bd-48db-b189-53f63b7875ba">
-      <p_RootComponentInterface type="ci.ComponentInterface" uuid="de6f7c46-adda-4a82-9c90-c3282d6e7676">
+    <rateBasedMdlGlobalDSMRateSpec type="ModelRefInfoRepo.GlobalDSMRateSpecMap" uuid="4e7e7a3c-10c0-4c95-9f6a-9d0cceb211eb"/>
+    <rateSpecOfGlobalDSMAccessedByDescExpFcnMdlMap type="ModelRefInfoRepo.GlobalDSMRateSpecMap" uuid="d7fc9993-da1f-40a0-927a-6986679e93a9"/>
+    <rootBlockDiagramInterface type="ci.Model" uuid="fea7fe9f-a56e-4db5-9fab-b7afddff55c2">
+      <p_RootComponentInterface type="ci.ComponentInterface" uuid="5b161d02-0c11-40d8-a774-8f05a1a752e7">
         <p_Name>Final_project_template</p_Name>
         <p_Type>ROOT</p_Type>
       </p_RootComponentInterface>
     </rootBlockDiagramInterface>
-    <simulinkFunctions type="ModelRefInfoRepo.SimulinkFunctions" uuid="fe691c1a-ad83-4de3-b587-3e605fc9815d">
+    <simulinkFunctions type="ModelRefInfoRepo.SimulinkFunctions" uuid="ff3145a4-fec8-48ca-b674-0d9234468a65">
       <compSimulinkFunctionCatalog></compSimulinkFunctionCatalog>
     </simulinkFunctions>
-    <sltpContext type="sltp.mm.core.Context" uuid="fffc5ac2-18eb-4d60-88ce-a42f23414e90">
+    <sltpContext type="sltp.mm.core.Context" uuid="a11a6f3b-6539-46d2-bcf0-39d7db975bc9">
       <priorityDirection>HighNumberLast</priorityDirection>
       <editorState type="sltp.mm.core.EditorState" uuid="1412f054-f169-4ff4-a4e7-a725d5646eae">
         <isSynchronized>true</isSynchronized>
         <panelState type="sltp.mm.core.EditorPanelState" uuid="44b81c63-8e35-4502-8121-6798eac3a7dd"/>
       </editorState>
-      <rootTask type="sltp.mm.core.Task" uuid="b6ff3c28-7a14-4e35-b893-215438d26762">
-        <context type="sltp.mm.core.Context" uuid="fffc5ac2-18eb-4d60-88ce-a42f23414e90"/>
+      <rootTask type="sltp.mm.core.Task" uuid="6119faad-9954-48a4-82bd-de0de22eb788">
+        <context type="sltp.mm.core.Context" uuid="a11a6f3b-6539-46d2-bcf0-39d7db975bc9"/>
         <explicit>false</explicit>
         <name>Default</name>
         <priority>-2147483648</priority>
-        <subgraph type="sltp.mm.core.Graph" uuid="34b76734-6bdf-4b01-ace2-e4a8c34850e9">
-          <connections type="sltp.mm.core.Connection" uuid="0e968655-78ad-49ca-a50a-fddb3556470e">
-            <dst type="sltp.mm.core.Task" uuid="61a4530d-6563-426d-83ed-f6eece72a1ff"/>
-            <src type="sltp.mm.core.Task" uuid="3dfcd57e-0913-4100-9813-432b86efd31e"/>
+        <subgraph type="sltp.mm.core.Graph" uuid="ba37c517-c8c2-4d11-ab89-97ff57d083f4">
+          <connections type="sltp.mm.core.Connection" uuid="3321f695-a1e9-4ce7-bc48-0e67b0b03bf8">
+            <dst type="sltp.mm.core.Task" uuid="d504eb6a-ca4e-459e-ba63-88516b82a6da"/>
+            <src type="sltp.mm.core.Task" uuid="56824f7f-8120-4aaa-bbe1-2b94f43f07f9"/>
           </connections>
-          <connections type="sltp.mm.core.Connection" uuid="cda7249d-c537-4bba-88cf-2f61eb77e09d">
-            <dst type="sltp.mm.core.Task" uuid="2d852995-0c61-4f4c-8351-c77708b9b51b"/>
-            <src type="sltp.mm.core.Task" uuid="61a4530d-6563-426d-83ed-f6eece72a1ff"/>
+          <connections type="sltp.mm.core.Connection" uuid="5ebe6029-5120-4852-b15c-f987b39d2c6e">
+            <dst type="sltp.mm.core.Task" uuid="2ee35c42-d5f5-468c-9b9c-87f8d6fb3ba0"/>
+            <src type="sltp.mm.core.Task" uuid="d504eb6a-ca4e-459e-ba63-88516b82a6da"/>
           </connections>
-          <tasks type="sltp.mm.core.Task" uuid="2d852995-0c61-4f4c-8351-c77708b9b51b">
-            <context type="sltp.mm.core.Context" uuid="fffc5ac2-18eb-4d60-88ce-a42f23414e90"/>
+          <tasks type="sltp.mm.core.Task" uuid="2ee35c42-d5f5-468c-9b9c-87f8d6fb3ba0">
+            <context type="sltp.mm.core.Context" uuid="a11a6f3b-6539-46d2-bcf0-39d7db975bc9"/>
             <explicit>false</explicit>
             <id>1</id>
-            <inConnections type="sltp.mm.core.Connection" uuid="cda7249d-c537-4bba-88cf-2f61eb77e09d"/>
+            <inConnections type="sltp.mm.core.Connection" uuid="5ebe6029-5120-4852-b15c-f987b39d2c6e"/>
             <isTimed>true</isTimed>
             <name>D1</name>
             <priority>40</priority>
-            <rates type="sltp.mm.core.Rate" uuid="070a5dfe-731c-4e99-95a4-a2b73eb14dc9">
+            <rates type="sltp.mm.core.Rate" uuid="60cb2558-20b1-4db0-a669-b3d79d8586ef">
               <annotation>D1</annotation>
               <color>-436207361</color>
               <hasBlocks>true</hasBlocks>
@@ -365,15 +372,15 @@
               <sti>0</sti>
             </rates>
           </tasks>
-          <tasks type="sltp.mm.core.Task" uuid="3dfcd57e-0913-4100-9813-432b86efd31e">
-            <context type="sltp.mm.core.Context" uuid="fffc5ac2-18eb-4d60-88ce-a42f23414e90"/>
+          <tasks type="sltp.mm.core.Task" uuid="56824f7f-8120-4aaa-bbe1-2b94f43f07f9">
+            <context type="sltp.mm.core.Context" uuid="a11a6f3b-6539-46d2-bcf0-39d7db975bc9"/>
             <explicit>false</explicit>
             <id>2</id>
             <isTimed>true</isTimed>
             <name>D2</name>
-            <outConnections type="sltp.mm.core.Connection" uuid="0e968655-78ad-49ca-a50a-fddb3556470e"/>
+            <outConnections type="sltp.mm.core.Connection" uuid="3321f695-a1e9-4ce7-bc48-0e67b0b03bf8"/>
             <priority>41</priority>
-            <rates type="sltp.mm.core.Rate" uuid="99bf21bc-00b8-4acc-8bd7-42adc2a7e6ed">
+            <rates type="sltp.mm.core.Rate" uuid="0d46a0bc-494e-452d-8ecd-39ebfbe87ab8">
               <annotation>D2</annotation>
               <color>13697279</color>
               <hasBlocks>true</hasBlocks>
@@ -384,16 +391,16 @@
               <sti>1</sti>
             </rates>
           </tasks>
-          <tasks type="sltp.mm.core.Task" uuid="61a4530d-6563-426d-83ed-f6eece72a1ff">
-            <context type="sltp.mm.core.Context" uuid="fffc5ac2-18eb-4d60-88ce-a42f23414e90"/>
+          <tasks type="sltp.mm.core.Task" uuid="d504eb6a-ca4e-459e-ba63-88516b82a6da">
+            <context type="sltp.mm.core.Context" uuid="a11a6f3b-6539-46d2-bcf0-39d7db975bc9"/>
             <explicit>false</explicit>
             <id>3</id>
-            <inConnections type="sltp.mm.core.Connection" uuid="0e968655-78ad-49ca-a50a-fddb3556470e"/>
+            <inConnections type="sltp.mm.core.Connection" uuid="3321f695-a1e9-4ce7-bc48-0e67b0b03bf8"/>
             <isTimed>true</isTimed>
             <name>D3</name>
-            <outConnections type="sltp.mm.core.Connection" uuid="cda7249d-c537-4bba-88cf-2f61eb77e09d"/>
+            <outConnections type="sltp.mm.core.Connection" uuid="5ebe6029-5120-4852-b15c-f987b39d2c6e"/>
             <priority>42</priority>
-            <rates type="sltp.mm.core.Rate" uuid="3ae611d6-0f40-400d-b1a0-cdd6c6d4b41f">
+            <rates type="sltp.mm.core.Rate" uuid="3885b55f-ef23-4f73-9eeb-0c3a823d8b7b">
               <annotation>D3</annotation>
               <color>52479</color>
               <hasBlocks>true</hasBlocks>
@@ -407,35 +414,35 @@
         </subgraph>
       </rootTask>
     </sltpContext>
-    <stateWriterToOwnerMap type="ModelRefInfoRepo.StateWriterInfo" uuid="9a890a4f-bfa6-4ca5-a05d-14794071af95"/>
-    <stoClientDataRegistry type="sto.ClientDataRegistry" uuid="9fbb76b3-dd33-491b-aff7-ca811781f5c6">
-      <dataSets type="sto.ClientClockNamedDataSet" uuid="d441e015-b0e3-44a1-b20a-4623476ce15f">
+    <stateWriterToOwnerMap type="ModelRefInfoRepo.StateWriterInfo" uuid="6d1a92f6-94bf-4ba2-91c6-b6a01e347422"/>
+    <stoClientDataRegistry type="sto.ClientDataRegistry" uuid="3b2733ac-e160-4519-bdd4-035bba1243a2">
+      <dataSets type="sto.ClientClockNamedDataSet" uuid="1eb8073e-1291-4a99-b1f5-c824ca315673">
         <tag>sltpEvents</tag>
       </dataSets>
-      <dataSets type="sto.ClientTaskHierarchyElementNamedDataSet" uuid="18dc1f23-330d-449f-b122-68a624e72862">
+      <dataSets type="sto.ClientTaskHierarchyElementNamedDataSet" uuid="c714553f-bee6-4fd5-a7d8-63a9aadaa04c">
         <tag>sltpTaskGroups</tag>
       </dataSets>
-      <dataSets type="sto.ClientTaskHierarchyElementNamedDataSet" uuid="bb535110-4e09-40f8-9fe7-360c5d2a0f18">
-        <dSet type="ModelRefInfoRepo.SltpTaskData" uuid="69076edb-22c1-4aac-a238-bb98e7fa9d32"/>
-        <dSet type="ModelRefInfoRepo.SltpTaskData" uuid="f85df533-bc5a-4bf1-b0f9-57b45e7b4168"/>
-        <dSet type="ModelRefInfoRepo.SltpTaskData" uuid="1cd578fd-6773-4074-8437-1cb2ba3be8de"/>
-        <tSet type="ModelRefInfoRepo.SltpTaskData" uuid="69076edb-22c1-4aac-a238-bb98e7fa9d32">
+      <dataSets type="sto.ClientTaskHierarchyElementNamedDataSet" uuid="9d3062de-1bbd-4bcd-a281-25ef72fb2c6b">
+        <dSet type="ModelRefInfoRepo.SltpTaskData" uuid="5a5b564c-37bc-4238-a527-b24f4ea88524"/>
+        <dSet type="ModelRefInfoRepo.SltpTaskData" uuid="408ecd35-0236-4c6d-bc0f-40a82a049fe0"/>
+        <dSet type="ModelRefInfoRepo.SltpTaskData" uuid="93d4f605-385d-4c27-ba08-4d027ad29f07"/>
+        <tSet type="ModelRefInfoRepo.SltpTaskData" uuid="5a5b564c-37bc-4238-a527-b24f4ea88524">
           <dataName>D1</dataName>
-          <linkedSet type="sto.ClientTaskHierarchyElementNamedDataSet" uuid="bb535110-4e09-40f8-9fe7-360c5d2a0f18"/>
+          <linkedSet type="sto.ClientTaskHierarchyElementNamedDataSet" uuid="9d3062de-1bbd-4bcd-a281-25ef72fb2c6b"/>
           <id type="sto.TaskHierarchyElementId">
             <id>_task0</id>
           </id>
         </tSet>
-        <tSet type="ModelRefInfoRepo.SltpTaskData" uuid="f85df533-bc5a-4bf1-b0f9-57b45e7b4168">
+        <tSet type="ModelRefInfoRepo.SltpTaskData" uuid="408ecd35-0236-4c6d-bc0f-40a82a049fe0">
           <dataName>D2</dataName>
-          <linkedSet type="sto.ClientTaskHierarchyElementNamedDataSet" uuid="bb535110-4e09-40f8-9fe7-360c5d2a0f18"/>
+          <linkedSet type="sto.ClientTaskHierarchyElementNamedDataSet" uuid="9d3062de-1bbd-4bcd-a281-25ef72fb2c6b"/>
           <id type="sto.TaskHierarchyElementId">
             <id>_task1</id>
           </id>
         </tSet>
-        <tSet type="ModelRefInfoRepo.SltpTaskData" uuid="1cd578fd-6773-4074-8437-1cb2ba3be8de">
+        <tSet type="ModelRefInfoRepo.SltpTaskData" uuid="93d4f605-385d-4c27-ba08-4d027ad29f07">
           <dataName>D3</dataName>
-          <linkedSet type="sto.ClientTaskHierarchyElementNamedDataSet" uuid="bb535110-4e09-40f8-9fe7-360c5d2a0f18"/>
+          <linkedSet type="sto.ClientTaskHierarchyElementNamedDataSet" uuid="9d3062de-1bbd-4bcd-a281-25ef72fb2c6b"/>
           <id type="sto.TaskHierarchyElementId">
             <id>_task2</id>
           </id>
@@ -443,6 +450,6 @@
         <tag>sltpTasks</tag>
       </dataSets>
     </stoClientDataRegistry>
-    <varTsUIDMap type="ModelRefInfoRepo.VarTsUIDMap" uuid="927bbccc-5f0d-4a67-b68c-6cd2a7e298aa"/>
+    <varTsUIDMap type="ModelRefInfoRepo.VarTsUIDMap" uuid="9f8f87ea-1079-40c3-8354-c5951334c3b0"/>
   </ModelRefInfoRepo.ModelRefInfoRoot>
 </MF0>
